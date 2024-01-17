@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/style.css" />
+    <script src="js/timesheet.js" defer></script>
+  </head>
+
+  <body class="add-punch-body">
+    <header>
+      <img class="logo" src="images/logo.png" alt="Clock face logo" />
+      <a href="dashboard.html"><h1 class="page-title">Tempus</h1></a>
+      <div id="nav-icon" class="mobile-icon" data-icon="open"></div>
+      <div id="links-element" class="links-container hide">
+        <ul>
+          <a href="check-calculator.html"><li>Paycheck Calculator</li></a>
+          <a href="timesheet.html"><li>Timesheet</li></a>
+          <a href="add-punch.html"><li>Manual Punch</li></a>
+          <a href="index.html"><li>Log Out</li></a>
+        </ul>
+      </div>
+    </header>
+    <div class="entries-container" data-empty="false">
+      <div class="entry">
+        <h3 class="entry-date">1/4/2024</h3>
+        <div class="entry-times">
+          <p class="entry-clock-in entry-data">10:05am</p>
+          <p class="entry-clock-out entry-data">2:30pm</p>
+        </div>
+      </div>
+      <div class="entry">
+        <h3 class="entry-date">1/5/2024</h3>
+        <div class="entry-times">
+          <p class="entry-clock-in entry-data">09:25am</p>
+          <p class="entry-clock-out entry-data">3:30pm</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

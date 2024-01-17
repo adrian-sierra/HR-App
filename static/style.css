@@ -1,0 +1,314 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+:root {
+  --ff: "Exo 2", sans-serif;
+  --background-color: hsl(206, 9%, 15%);
+  --primary-color: hsl(204, 2%, 43%);
+  --accent-color: hsl(0, 100%, 100%);
+}
+
+body {
+  color: var(--background-color);
+  font-family: var(--ff);
+  min-height: 100vh;
+  /* display: grid; */
+  /* justify-content: center; */
+  /* align-content: center; */
+  background-color: var(--background-color);
+}
+a {
+  text-decoration: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+.logo {
+  width: 55px;
+}
+.page-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+.mobile-icon {
+  cursor: pointer;
+}
+.mobile-icon[data-icon="open"],
+.mobile-icon[data-icon="close"] {
+  width: 55px;
+  height: 55px;
+  background-size: contain;
+}
+.mobile-icon[data-icon="open"] {
+  background-image: url(../images/hamburger.svg);
+}
+.mobile-icon[data-icon="close"] {
+  z-index: 9999;
+  background-image: url(../images/x.svg);
+}
+.links-container {
+  z-index: 999;
+  position: absolute;
+  color: var(--accent-color);
+  background-color: var(--primary-color);
+  inset: 0 0 0 20vw;
+}
+
+.links-container > ul > a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+ul {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  list-style: none;
+  display: grid;
+  margin-top: 50%;
+  margin-left: 3rem;
+  gap: 3rem;
+}
+ul > li {
+  cursor: pointer;
+}
+.links-container > ul > a:hover {
+  color: var(--background-color);
+}
+.icon-hide {
+  display: none;
+}
+.names-container {
+  display: flex;
+  width: 107.5%;
+}
+.names > input {
+  width: 85%;
+}
+.main-container {
+  --bordo-radius: 0.675rem;
+  border: 2px solid var(--accent-color);
+  border-radius: var(--bordo-radius);
+  width: 400px;
+  max-width: 400px;
+  display: grid;
+  margin: 0 auto;
+  margin-top: 25%;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--primary-color);
+}
+.input-container {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1.25rem;
+}
+.label-input {
+  display: grid;
+  gap: 0.375rem;
+}
+.form {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.form-input {
+  outline: none;
+  border: 0;
+  box-shadow: 0 0 0 2x var(--primary-color);
+  border-radius: calc(var(--bordo-radius) * 0.25);
+  padding: 0.25em 0.5em;
+}
+.form-input:focus {
+  box-shadow: 0 0 0 2px var(--background-color);
+}
+.fake-button {
+  text-decoration: none;
+  text-align: center;
+}
+.btn,
+.fake-button {
+  cursor: pointer;
+  border: 0;
+  padding: 0.5em 0;
+  border-radius: var(--bordo-radius);
+  background-color: var(--background-color);
+  color: var(--accent-color);
+}
+.btn:hover,
+.btn:focus-visible,
+.fake-button:hover,
+.fake-button:focus-visible {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  box-shadow: 0 0 0 2px var(--background-color);
+}
+.new-user {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 1rem; */
+}
+
+.thanks-container {
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+}
+.thanks-text {
+  font-size: 2rem;
+
+  color: var(--primary-color);
+}
+.thanks-container > .fake-button {
+  background-color: var(--primary-color);
+  border-radius: 0.675rem;
+}
+.dashboard-body {
+  color: var(--accent-color);
+}
+.welcome-message {
+  margin-top: 6.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.punch-container {
+  margin-top: 7.5rem;
+  display: grid;
+  text-align: center;
+  gap: 1rem;
+}
+.date-time-container,
+.punch-btn {
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.date-time-container {
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--primary-color);
+}
+.time-block {
+  margin-bottom: 0.375rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(0, 255, 0, 0.5);
+}
+.date-block {
+  color: var(--background-color);
+}
+.punch-btn {
+  cursor: pointer;
+  color: var(--background-color);
+  border: 0;
+  font-size: 1rem;
+  padding: 0.5em 0;
+  background-color: var(--accent-color);
+}
+.punch-btn:hover,
+.punch-btn:focus-visible {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  box-shadow: 0 0 0 2px var(--accent-color);
+}
+.entries-container {
+  --radius: 10px;
+  width: min(85vw, 650px);
+  /* background-color: var(--primary-color); */
+  margin: 0 auto;
+  margin-top: 15vh;
+  display: grid;
+  border-radius: var(--radius);
+}
+.entries-container[data-empty="false"] {
+  border: 2px solid var(--primary-color);
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+.entry {
+  border: 2px solid var(--accent-color);
+  border-radius: var(--radius);
+  height: 90px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 0.275fr 0.7fr;
+  gap: 1rem;
+  padding: 0.75rem 0.75rem;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  text-align: center;
+  font-weight: 600;
+}
+
+.entry-date {
+  border-right: 2px solid var(--accent-color);
+}
+.entry-data {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  border-radius: var(--radius);
+  text-align: left;
+  padding-left: 0.25rem;
+}
+.entry-date,
+.entry-data {
+  display: grid;
+  align-items: center;
+}
+.entry-times {
+  padding: 0.75rem 0.75rem 0 0.75rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+}
+.entry-data {
+  position: relative;
+  width: min(50%, 100px);
+  /* border: 1px solid var(--background-color); */
+}
+.entry-clock-in::before,
+.entry-clock-out::before {
+  content: "";
+  position: absolute;
+  top: -45%;
+  left: 0;
+  color: var(--accent-color);
+}
+.entry-clock-in::before {
+  content: "Clock In";
+}
+.entry-clock-out::before {
+  content: "Clock Out";
+}
+.hide {
+  display: none;
+}
+.hide-element {
+  opacity: 0;
+  cursor: default;
+}

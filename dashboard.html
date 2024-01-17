@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/style.css" />
+    <script src="js/dashboard.js" defer></script>
+  </head>
+
+  <body class="dashboard-body">
+    <header>
+      <img class="logo" src="images/logo.png" alt="Clock face logo" />
+      <a href="dashboard.html"><h1 class="page-title">Tempus</h1></a>
+      <div id="nav-icon" class="mobile-icon" data-icon="open"></div>
+      <div id="links-element" class="links-container hide">
+        <ul>
+          <a href="check-calculator.html"><li>Paycheck Calculator</li></a>
+          <a href="timesheet.html"><li>Timesheet</li></a>
+          <a href="add-punch.html"><li>Manual Punch</li></a>
+          <a href="index.html"><li>Log Out</li></a>
+        </ul>
+      </div>
+    </header>
+    <h2 class="welcome-message">Welcome, {User}</h2>
+    <div class="punch-container">
+      <div class="date-time-container">
+        <div id="time" class="time-block date-time"></div>
+        <div id="date" class="date-block date-time"></div>
+      </div>
+      <button id="clock-in" class="punch-btn">Clock In</button>
+      <button id="clock-out" class="punch-btn">Clock Out</button>
+      <button id="start-lunch" class="punch-btn">Start Lunch</button>
+      <button id="end-lunch" class="punch-btn">End Lunch</button>
+    </div>
+  </body>
+</html>

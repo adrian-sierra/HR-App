@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/style.css" />
+    <script src="js/add.js" defer></script>
+  </head>
+
+  <body class="add-punch-body">
+    <header>
+      <img class="logo" src="images/logo.png" alt="Clock face logo" />
+      <a href="dashboard.html"><h1 class="page-title">Tempus</h1></a>
+      <div id="nav-icon" class="mobile-icon" data-icon="open"></div>
+      <div id="links-element" class="links-container hide">
+        <ul>
+          <a href="check-calculator.html"><li>Paycheck Calculator</li></a>
+          <a href="timesheet.html"><li>Timesheet</li></a>
+          <a href="add-punch.html"><li>Manual Punch</li></a>
+          <a href="index.html"><li>Log Out</li></a>
+        </ul>
+      </div>
+    </header>
+    <div class="date-time-container">
+      <div id="time" class="time-block date-time"></div>
+      <div id="date" class="date-block date-time"></div>
+    </div>
+  </body>
+</html>
