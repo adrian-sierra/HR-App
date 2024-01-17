@@ -26,9 +26,47 @@
         </ul>
       </div>
     </header>
-    <div class="date-time-container">
-      <div id="time" class="time-block date-time"></div>
-      <div id="date" class="date-block date-time"></div>
+    <form action="#" class="manual-form">
+      <h1>Manual Entry</h1>
+      <div class="input-group">
+        <label for="manual-date">Date</label>
+        <input type="date" name="manual-date" />
+      </div>
+      <div class="input-group">
+        <label for="manual-time">Time</label>
+        <input type="time" name="manual-time" />
+      </div>
+      <div class="input-group">
+        <label for="manual-type">Type</label>
+        <select name="type" id="">
+          <option value="clock-in">Clock In</option>
+          <option value="clock-out">Clock Out</option>
+          <option value="start-lunch">Start Lunch</option>
+          <option value="end-lunch">End Lunch</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="manual-reason">Reason</label>
+        <textarea name="manual-reason" id="" cols="25" rows="7"></textarea>
+      </div>
+      <button class="manual-button">Submit</button>
+    </form>
+    <h1>Edit Entry</h1>
+    <div class="entries-container" data-empty="false">
+      <div class="entry">
+        <h3 class="entry-date">1/4/2024</h3>
+        <div class="entry-times">
+          <p class="entry-clock-in entry-data">10:05am</p>
+          <p class="entry-clock-out entry-data">2:30pm</p>
+        </div>
+      </div>
+      <div class="entry">
+        <h3 class="entry-date">1/5/2024</h3>
+        <div class="entry-times">
+          <p class="entry-clock-in entry-data">09:25am</p>
+          <p class="entry-clock-out entry-data">3:30pm</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
