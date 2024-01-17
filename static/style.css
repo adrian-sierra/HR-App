@@ -26,18 +26,17 @@ svg {
   --accent-color: hsl(0, 100%, 100%);
 }
 
+/* General purpose styling */
 body {
   color: var(--background-color);
   font-family: var(--ff);
   min-height: 100vh;
-  /* display: grid; */
-  /* justify-content: center; */
-  /* align-content: center; */
   background-color: var(--background-color);
 }
 a {
   text-decoration: none;
 }
+/* Header styling */
 header {
   display: flex;
   justify-content: space-between;
@@ -54,6 +53,7 @@ header {
   font-weight: 500;
   color: var(--accent-color);
 }
+/* For mobile viewing */
 .mobile-icon {
   cursor: pointer;
 }
@@ -77,7 +77,6 @@ header {
   background-color: var(--primary-color);
   inset: 0 0 0 20vw;
 }
-
 .links-container > ul > a {
   text-decoration: none;
   color: var(--accent-color);
@@ -107,6 +106,7 @@ ul > li {
 .names > input {
   width: 85%;
 }
+/* index.html + create.html main container styling*/
 .main-container {
   --bordo-radius: 0.675rem;
   border: 2px solid var(--accent-color);
@@ -120,6 +120,11 @@ ul > li {
   padding: 2rem;
   background-color: var(--primary-color);
 }
+/* form(s) styling */
+.form {
+  display: grid;
+  gap: 2.5rem;
+}
 .input-container {
   display: grid;
   grid-auto-flow: row;
@@ -129,11 +134,6 @@ ul > li {
   display: grid;
   gap: 0.375rem;
 }
-.form {
-  display: grid;
-  gap: 2.5rem;
-}
-
 .form-input {
   outline: none;
   border: 0;
@@ -165,12 +165,13 @@ ul > li {
   color: var(--background-color);
   box-shadow: 0 0 0 2px var(--background-color);
 }
+/* Creating user page styling */
 .new-user {
   display: flex;
   justify-content: space-between;
   /* gap: 1rem; */
 }
-
+/* Thanks "page"/confirmation alert styling */
 .thanks-container {
   display: grid;
   gap: 1rem;
@@ -185,6 +186,7 @@ ul > li {
   background-color: var(--primary-color);
   border-radius: 0.675rem;
 }
+/* Main dashboard of logged in user styling */
 .dashboard-body {
   color: var(--accent-color);
 }
@@ -199,6 +201,7 @@ ul > li {
   text-align: center;
   gap: 1rem;
 }
+/* Styling for clock display */
 .date-time-container,
 .punch-btn {
   border: 2px solid var(--accent-color);
@@ -236,6 +239,7 @@ ul > li {
   color: var(--accent-color);
   box-shadow: 0 0 0 2px var(--accent-color);
 }
+/* Timesheet styling */
 .entries-container {
   --radius: 10px;
   width: min(85vw, 650px);
@@ -305,6 +309,9 @@ ul > li {
 .entry-clock-out::before {
   content: "Clock Out";
 }
+/* Manual punch page styling */
+
+/* Hiding elements styling */
 .hide {
   display: none;
 }
