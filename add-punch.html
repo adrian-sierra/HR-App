@@ -26,48 +26,61 @@
         </ul>
       </div>
     </header>
-    <form action="#" class="manual-form">
-      <h1>Manual Entry</h1>
-      <div class="input-group">
-        <label for="manual-date">Date</label>
-        <input type="date" name="manual-date" />
-      </div>
-      <div class="input-group">
-        <label for="manual-time">Time</label>
-        <input type="time" name="manual-time" />
-      </div>
-      <div class="input-group">
-        <label for="manual-type">Type</label>
-        <select name="type" id="">
-          <option value="clock-in">Clock In</option>
-          <option value="clock-out">Clock Out</option>
-          <option value="start-lunch">Start Lunch</option>
-          <option value="end-lunch">End Lunch</option>
-        </select>
-      </div>
-      <div class="input-group">
-        <label for="manual-reason">Reason</label>
-        <textarea name="manual-reason" id="" cols="25" rows="7"></textarea>
-      </div>
-      <button class="manual-button">Submit</button>
-    </form>
-    <h1>Edit Entry</h1>
-    <div class="entries-container" data-empty="false">
-      <div class="entry">
-        <h3 class="entry-date">1/4/2024</h3>
-        <div class="entry-times">
-          <p class="entry-clock-in entry-data">10:05am</p>
-          <p class="entry-clock-out entry-data">2:30pm</p>
+    <div class="add-main-content">
+      <form action="#" class="manual-form">
+        <h1 class="entry-titles">Manual Entry</h1>
+        <div class="input-group">
+          <label for="manual-date">Date</label>
+          <input type="date" name="manual-date" />
         </div>
-        <h4 class="edit-entry">Edit</h4>
-      </div>
-      <div class="entry">
-        <h3 class="entry-date">1/5/2024</h3>
-        <div class="entry-times">
-          <p class="entry-clock-in entry-data">09:25am</p>
-          <p class="entry-clock-out entry-data">3:30pm</p>
+        <div class="input-group">
+          <label for="manual-time">Time</label>
+          <input type="time" name="manual-time" />
         </div>
-        <h4 class="edit-entry">Edit</h4>
+        <div class="input-group">
+          <label for="manual-type">Type</label>
+          <select name="type" id="">
+            <option value="clock-in">Clock In</option>
+            <option value="clock-out">Clock Out</option>
+            <option value="start-lunch">Start Lunch</option>
+            <option value="end-lunch">End Lunch</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="manual-reason">Reason</label>
+          <textarea name="manual-reason" id="" cols="25" rows="7"></textarea>
+        </div>
+        <button class="manual-button">Submit</button>
+      </form>
+      <div class="auto-form">
+        <h1 class="entry-titles">Edit Entry</h1>
+        <div class="entries-container entries" data-empty="false">
+          <div class="entry">
+            <h3 class="entry-date">1/4/2024</h3>
+            <div class="entry-times">
+              <div class="entry-clock entry-times-container">
+                <p class="entry-clock-in entry-data">10:05am</p>
+                <p class="entry-clock-out entry-data">2:30pm</p>
+
+              </div>
+              <div class="entry-lunch entry-times-container" data-lunch="true">
+                <p class="entry-lunch-in entry-data">12:00pm</p>
+                <p class="entry-lunch-out entry-data">12:30pm</p>
+              </div>
+            </div>
+            <h4 class="edit-entry">Edit</h4>
+          </div>
+          <!-- <div class="entry">
+            <h3 class="entry-date">1/5/2024</h3>
+            <div class="entry-times">
+              <p class="entry-clock-in entry-data">10:05am</p>
+              <p class="entry-lunch-in entry-data hide">12:00pm</p>
+              <p class="entry-lunch-out entry-data hide">12:30pm</p>
+              <p class="entry-clock-out entry-data">2:30pm</p>
+            </div>
+            <h4 class="edit-entry">Edit</h4>
+          </div>
+        </div> -->
       </div>
     </div>
   </body>

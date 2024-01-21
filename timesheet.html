@@ -12,7 +12,7 @@
     <script src="js/timesheet.js" defer></script>
   </head>
 
-  <body class="add-punch-body">
+  <body class="timesheet-body">
     <header>
       <img class="logo" src="images/logo.png" alt="Clock face logo" />
       <a href="dashboard.html"><h1 class="page-title">Tempus</h1></a>
@@ -26,29 +26,21 @@
         </ul>
       </div>
     </header>
-    <div class="entries-container" data-empty="false">
-      <h1 class="week-of">Week of <span id="entry-week"></span></h1>
-      <div class="entry">
-        <h3 class="entry-date">1/4/2024</h3>
-        <div class="entry-times">
-          <p class="entry-clock-in entry-data">10:05am</p>
-          <p class="entry-lunch-in entry-data hide">12:00pm</p>
-          <p class="entry-lunch-out entry-data hide">12:30pm</p>
-          <p class="entry-clock-out entry-data">2:30pm</p>
+      <div class="entries-container entries" data-empty="false">
+        <h1 class="week-of">Week of <span id="entry-week"></span></h1>
+        <div class="entry">
+          <h3 class="entry-date">1/4/2024</h3>
+          <div class="entry-times">
+            <div class="entry-clock entry-times-container">
+              <p class="entry-clock-in entry-data">10:05am</p>
+              <p class="entry-clock-out entry-data">2:30pm</p>
+            </div>
+            <div class="entry-lunch entry-times-container" data-lunch="false">
+              <p class="entry-lunch-in entry-data">12:00pm</p>
+              <p class="entry-lunch-out entry-data">12:30pm</p>
+            </div>
+          </div>
+          <p class="total-time">4.5 Hours</p>
         </div>
-        <p class="total-time">4.5 Hours</p>
-        <!-- <button class="edit-entry">Edit</button> -->
-      </div>
-      <div class="entry">
-        <h3 class="entry-date">1/5/2024</h3>
-        <div class="entry-times">
-          <p class="entry-clock-in entry-data">10:05am</p>
-          <p class="entry-lunch-in entry-data hide">12:00pm</p>
-          <p class="entry-lunch-out entry-data hide">12:30pm</p>
-          <p class="entry-clock-out entry-data">2:30pm</p>
-        </div>
-        <p class="total-time">4.5 Hours</p>
-      </div>
-    </div>
   </body>
 </html>

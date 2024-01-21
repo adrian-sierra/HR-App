@@ -24,6 +24,7 @@ svg {
   --background-color: hsl(206, 9%, 15%);
   --primary-color: hsl(204, 2%, 43%);
   --accent-color: hsl(0, 100%, 100%);
+  --money-color: hsl(120, 60%, 60%);
 }
 
 /* General purpose styling */
@@ -220,7 +221,7 @@ ul > li {
   margin-bottom: 0.375rem;
   font-size: 2rem;
   font-weight: 600;
-  color: rgb(0, 255, 0, 0.5);
+  color: var(--money-color);
 }
 .date-block {
   color: var(--background-color);
@@ -240,35 +241,35 @@ ul > li {
   box-shadow: 0 0 0 2px var(--accent-color);
 }
 /* Timesheet styling */
-.entries-container {
+.entries {
   --radius: 10px;
-  width: min(95vw, 650px);
-  /* background-color: var(--primary-color); */
+  width: min(90vw, 650px);
   margin: 0 auto;
-  margin-top: 15vh;
   display: grid;
   border-radius: var(--radius);
 }
-.entries-container[data-empty="false"] {
-  border: 2px solid var(--primary-color);
-  gap: 0.75rem;
-  padding: 1.5rem;
+.entries[data-empty="false"] {
+  gap: 1rem;
+}
+.timesheet-body > .entries {
+  margin-top: 15vh;
 }
 .week-of {
   font-size: 1.25rem;
   font-weight: 600;
   text-align: center;
   margin-bottom: 1rem;
+  color: var(--accent-color);
 }
 .entry {
+  --side-padding: 0.75rem;
   border: 2px solid var(--accent-color);
   border-radius: var(--radius);
-  height: 90px;
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 0.4fr 1fr 0.25fr;
   gap: 1rem;
-  padding: 0.75rem 0.75rem;
+  padding: 0.75rem var(--side-padding);
   background-color: var(--primary-color);
   color: var(--accent-color);
   text-align: center;
@@ -287,12 +288,17 @@ ul > li {
 }
 .entry-date,
 .entry-data,
-.total-time {
+.total-time,
+.edit-entry {
   display: grid;
   align-items: center;
 }
 .entry-times {
-  padding: 0.75rem 0.125rem 0 0.125rem;
+  display: grid;
+}
+.entry-times-container {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   display: flex;
   justify-content: space-evenly;
   gap: 0.5rem;
@@ -300,13 +306,16 @@ ul > li {
 .entry-data {
   position: relative;
   width: min(50%, 100px);
-  /* border: 1px solid var(--background-color); */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
-.entry-clock-in::before,
-.entry-clock-out::before {
+.entry-lunch > .entry-data {
+  margin-top: 0.5rem;
+}
+.entry-data::before {
   content: "";
   position: absolute;
-  top: -45%;
+  top: -60%;
   left: 0;
   color: var(--accent-color);
 }
@@ -316,15 +325,46 @@ ul > li {
 .entry-clock-out::before {
   content: "Clock Out";
 }
+.entry-lunch-in::before {
+  content: "Lunch In";
+}
+.entry-lunch-out::before {
+  content: "Lunch Out";
+}
+.entry-lunch[data-lunch="false"] {
+  display: none;
+}
 .total-time {
-  font-size: 0.9rem;
-  color: var(--background-color);
+  font-size: 0.8rem;
   border-left: 2px solid var(--accent-color);
-  padding-left: 0.25rem;
+  padding-left: calc(var(--side-padding) / 2);
+  color: var(--money-color);
 }
 /* Manual punch page styling */
-.add-punch-body {
+.add-main-content {
   color: var(--accent-color);
+  text-align: center;
+  margin-top: 5vh;
+  display: grid;
+  gap: 3.5rem;
+}
+.entry-titles {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  border-top: 5px solid var(--primary-color);
+}
+.edit-entry {
+  cursor: pointer;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  align-self: center;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px var(--accent-color);
+}
+.edit-entry:hover {
+  box-shadow: 0 0 0 2px var(--background-color);
+  color: var(--background-color);
 }
 /* Hiding elements styling */
 .hide {
