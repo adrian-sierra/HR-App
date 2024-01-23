@@ -19,6 +19,7 @@
       <div id="nav-icon" class="mobile-icon" data-icon="open"></div>
       <div id="links-element" class="links-container hide">
         <ul>
+          <a href="account-info.html"><li>Account Info</li></a>
           <a href="check-calculator.html"><li>Paycheck Calculator</li></a>
           <a href="timesheet.html"><li>Timesheet</li></a>
           <a href="add-punch.html"><li>Manual Punch</li></a>
@@ -27,30 +28,33 @@
       </div>
     </header>
     <div class="add-main-content">
-      <form action="#" class="manual-form">
+      <form action="#" id="manual-form" class="add-form">
         <h1 class="entry-titles">Manual Entry</h1>
-        <div class="input-group">
-          <label for="manual-date">Date</label>
-          <input type="date" name="manual-date" />
+        <div class="manual-entry">
+          <div class="input-group">
+            <label for="manual-date">Date</label>
+            <input class="form-input edit" type="date" name="manual-date" />
+          </div>
+          <div class="input-group">
+            <label for="manual-time">Time</label>
+            <input class="form-input edit" type="time" name="manual-time" />
+          </div>
+          <div class="input-group">
+            <label for="manual-type">Type</label>
+            <select class="form-input edit" name="type" id="">
+              <option value="" disabled selected></option>
+              <option value="clock-in">Clock In</option>
+              <option value="clock-out">Clock Out</option>
+              <option value="start-lunch">Start Lunch</option>
+              <option value="end-lunch">End Lunch</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="manual-reason">Reason</label>
+            <textarea class="form-input edit" name="manual-reason" id="" cols="25" rows="5"></textarea>
+          </div>
+          <button class="add-form-btn dashboard-btn">Submit</button>
         </div>
-        <div class="input-group">
-          <label for="manual-time">Time</label>
-          <input type="time" name="manual-time" />
-        </div>
-        <div class="input-group">
-          <label for="manual-type">Type</label>
-          <select name="type" id="">
-            <option value="clock-in">Clock In</option>
-            <option value="clock-out">Clock Out</option>
-            <option value="start-lunch">Start Lunch</option>
-            <option value="end-lunch">End Lunch</option>
-          </select>
-        </div>
-        <div class="input-group">
-          <label for="manual-reason">Reason</label>
-          <textarea name="manual-reason" id="" cols="25" rows="7"></textarea>
-        </div>
-        <button class="manual-button">Submit</button>
       </form>
       <div class="auto-form">
         <h1 class="entry-titles">Edit Entry</h1>
@@ -60,7 +64,7 @@
             <div class="entry-times">
               <div class="entry-clock entry-times-container">
                 <p class="entry-clock-in entry-data">10:05am</p>
-                <p class="entry-clock-out entry-data">2:30pm</p>
+                <p class="entry-clock-out entry-data"></p>
 
               </div>
               <div class="entry-lunch entry-times-container" data-lunch="true">
@@ -70,17 +74,36 @@
             </div>
             <h4 class="edit-entry">Edit</h4>
           </div>
-          <!-- <div class="entry">
+          <div class="entry">
             <h3 class="entry-date">1/5/2024</h3>
             <div class="entry-times">
-              <p class="entry-clock-in entry-data">10:05am</p>
-              <p class="entry-lunch-in entry-data hide">12:00pm</p>
-              <p class="entry-lunch-out entry-data hide">12:30pm</p>
-              <p class="entry-clock-out entry-data">2:30pm</p>
+              <div class="entry-clock entry-times-container">
+                <p class="entry-clock-in entry-data">10:05am</p>
+                <p class="entry-clock-out entry-data"></p>
+
+              </div>
+              <div class="entry-lunch entry-times-container" data-lunch="true">
+                <p class="entry-lunch-in entry-data">12:00pm</p>
+                <p class="entry-lunch-out entry-data">12:30pm</p>
+              </div>
             </div>
             <h4 class="edit-entry">Edit</h4>
           </div>
-        </div> -->
+          <div class="entry">
+            <h3 class="entry-date">1/6/2024</h3>
+            <div class="entry-times">
+              <div class="entry-clock entry-times-container">
+                <p class="entry-clock-in entry-data">10:05am</p>
+                <p class="entry-clock-out entry-data"></p>
+
+              </div>
+              <div class="entry-lunch entry-times-container" data-lunch="true">
+                <p class="entry-lunch-in entry-data">12:00pm</p>
+                <p class="entry-lunch-out entry-data">12:30pm</p>
+              </div>
+            </div>
+            <h4 class="edit-entry">Edit</h4>
+          </div>
       </div>
     </div>
   </body>
