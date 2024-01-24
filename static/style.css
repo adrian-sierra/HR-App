@@ -141,7 +141,7 @@ ul > li {
   border: 0;
   /* box-shadow: 0 0 0 2px var(--primary-color); */
   border-radius: calc(var(--bordo-radius) * 0.25);
-  padding: 0.25em 0.5em;
+  padding: 0.25em;
 }
 .form-input:focus {
   box-shadow: 0 0 0 2px var(--outline-color);
@@ -396,6 +396,83 @@ ul > li {
   box-shadow: 0 0 0 2px var(--background-color);
   color: var(--background-color);
 }
+/* Check calculator styling */
+.check-calculator-body {
+  color: var(--accent-color);
+}
+.check-calculator-body > main {
+  margin-inline: 1.5rem;
+}
+.check-titles {
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+.title-span {
+  position: relative;
+}
+.title-span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6.25px;
+  width: 100%;
+  background-color: var(--accent-color);
+  height: 4.125px;
+  border-radius: 10px;
+}
+.current-check {
+  margin: 5rem 0;
+}
+.current-check-container {
+  display: grid;
+  grid-auto-flow: column;
+}
+.check-form {
+  display: grid;
+  gap: 0.5rem;
+}
+.check-group {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 0.2fr 0.5fr;
+}
+.check-group > input {
+  width: 100px;
+}
+.check-btn {
+  margin-left: 0;
+  margin-top: 0.5rem;
+}
+.result-title {
+  margin-top: 20%;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.check-calculation {
+  color: var(--money-color);
+  font-weight: 600;
+}
+table {
+  text-align: center;
+  margin: 0 auto;
+}
+th {
+  font-weight: 600;
+}
+table,
+th,
+td {
+  border: 2px solid var(--accent-color);
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 0.375rem 0.5rem;
+}
+
 /* Hiding elements styling */
 .hide {
   display: none;
