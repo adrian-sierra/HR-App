@@ -46,13 +46,23 @@
               <label for="rate">Rate</label>
               <input class="form-input" type="number" name="rate" />
             </div>
-            <button class="check-btn dashboard-btn">Calculate</button>
+            <button id="calculation-button" class="check-btn dashboard-btn">
+              Calculate
+            </button>
           </div>
           <div class="check-result">
-            <h2 class="result-title">Result:</h2>
-            <p class="check-calculation">
-              $<span id="check-number">1000</span>
-            </p>
+            <div class="gross-pay">
+              <h2 class="result-title">Gross Pay:</h2>
+              <p class="gross-result check-calculation">
+                <span id="gross-number"></span>
+              </p>
+            </div>
+            <div class="net-pay">
+              <h2 class="result-title">Net Pay:</h2>
+              <p class="net-result check-calculation">
+                <span id="net-number"></span>
+              </p>
+            </div>
           </div>
         </div>
       </div>

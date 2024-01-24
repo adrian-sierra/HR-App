@@ -375,7 +375,9 @@ ul > li {
   padding: 0.5rem 0;
   margin-inline: 1.5rem;
   text-align: center;
+  font-weight: 600;
 }
+
 .add-form-btn {
   margin-top: 0.5rem;
 }
@@ -424,7 +426,8 @@ ul > li {
   border-radius: 10px;
 }
 .current-check {
-  margin: 5rem 0;
+  margin-top: 5vh;
+  margin-bottom: 5rem;
 }
 .current-check-container {
   display: grid;
@@ -446,9 +449,11 @@ ul > li {
   margin-left: 0;
   margin-top: 0.5rem;
 }
+.check-result {
+  display: grid;
+}
 .result-title {
-  margin-top: 20%;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
 }
 .check-calculation {
