@@ -10,46 +10,37 @@ nav_icon.addEventListener("click", () => {
     links_element.classList.add("hide");
   }
 });
-const card_containers = document.querySelectorAll(".card");
+
 function resetPrevious(tab, card) {
   tab.classList.remove("active");
   card.classList.add("hide");
-  // tab.classList.add("hide");
-}
-function currentTab(tab) {
-  console.log(tab);
 }
 function assignTab(tab, card) {
   tab.classList.add("active");
   card.classList.remove("hide");
-  // tab.classList.remove("hide");
 }
 function newTab(tab, card) {
-  console.log("clicked tab: " + tab);
-  console.log("currently active tab: " + activeTab());
   if (activeTab() != false) {
-    resetPrevious(activeTab(), card);
+    let [currentTab, currentCard] = activeTab();
+    resetPrevious(currentTab, currentCard);
     assignTab(tab, card);
   } else {
     assignTab(tab, card);
   }
 }
-const card_items = document.querySelectorAll(".card-item");
+
 function activeTab() {
   for (let i = 0; i < card_items.length; i++) {
     if (card_items[i].classList.contains("active")) {
-      return card_items[i];
+      return [card_items[i], card_containers[i]];
     }
   }
   return false;
 }
-
+const card_items = document.querySelectorAll(".card-item");
+const card_containers = document.querySelectorAll(".card");
 for (let i = 0; i < card_items.length; i++) {
   card_items[i].addEventListener("click", () => {
-    // card_items[i].classList.toggle("active");
-    // card_containers[i].classList.toggle("hide");
-    // let currentTab = card_items[i];
-    console.log(card_containers[i]);
     newTab(card_items[i], card_containers[i]);
   });
 }
