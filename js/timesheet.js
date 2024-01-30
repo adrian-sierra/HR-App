@@ -15,14 +15,9 @@ nav_icon.addEventListener("click", () => {
 function getMondayOfCurrentWeek() {
   let fullDate = "";
   let d = new Date();
-  let starting_monday = d.getDate() - d.getDay() + 1;
+  let starting_week = d.getDate() - d.getDay();
   return (
-    fullDate +
-    (d.getMonth() + 1) +
-    "/" +
-    starting_monday +
-    "/" +
-    d.getFullYear()
+    fullDate + (d.getMonth() + 1) + "/" + starting_week + "/" + d.getFullYear()
   );
 }
 current_week.textContent = getMondayOfCurrentWeek();
