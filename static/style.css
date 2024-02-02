@@ -539,3 +539,7 @@ td {
   opacity: 0;
   cursor: default;
 }
+/* Active elements styling */
+.active-page {
+  color: var(--background-color);
+}
