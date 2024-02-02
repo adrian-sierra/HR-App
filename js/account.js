@@ -10,7 +10,6 @@ nav_icon.addEventListener("click", () => {
     links_element.classList.add("hide");
   }
 });
-
 function resetPrevious(tab, card) {
   tab.classList.remove("active");
   card.classList.add("hide");
@@ -28,7 +27,6 @@ function newTab(tab, card) {
     assignTab(tab, card);
   }
 }
-
 function activeTab() {
   for (let i = 0; i < card_items.length; i++) {
     if (card_items[i].classList.contains("active")) {
@@ -44,13 +42,34 @@ for (let i = 0; i < card_items.length; i++) {
     newTab(card_items[i], card_containers[i]);
   });
 }
+function resetContent(subset) {
+  subset.classList.remove("active");
+}
+function assignContent(subset) {
+  subset.classList.add("active");
+}
+function newContent(subset) {
+  if (activeContent() != false) {
+    resetContent(activeContent());
+    assignContent(subset);
+  } else {
+    assignContent(subset);
+  }
+}
+function activeContent() {
+  for (let i = 0; i < item_subsets.length; i++) {
+    if (item_subsets[i].classList.contains("active")) {
+      return item_subsets[i];
+    }
+  }
+  return false;
+}
 const item_subsets = document.querySelectorAll(".item-subset");
-const subset_containers = document.querySelectorAll(".subset-container");
-let subset_content;
 for (let i = 0; i < item_subsets.length; i++) {
   item_subsets[i].addEventListener("click", () => {
-    subset_content = document.querySelectorAll(".subset-content");
+    const subset_content = document.querySelectorAll(".subset-content");
     subset_content[i].classList.toggle("hide");
-    item_subsets[i].classList.toggle("active");
+    // item_subsets[i].classList.toggle("active");
+    newContent(item_subsets[i]);
   });
 }
