@@ -34,21 +34,21 @@
         <div class="manual-entry">
           <div class="input-group">
             <label for="manual-date">Date</label>
-            <input class="form-input edit" type="date" name="manual-date" />
-          </div>
-          <div class="input-group">
-            <label for="manual-time">Time</label>
-            <input class="form-input edit" type="time" name="manual-time" />
+            <input id="form-date" class="form-input edit" type="date" name="manual-date" />
           </div>
           <div class="input-group">
             <label for="manual-type">Type</label>
-            <select class="form-input edit" name="type" id="">
+            <select id="form-type" class="form-input edit" name="type" id="">
               <option value="" disabled selected></option>
               <option value="clock-in">Clock In</option>
               <option value="clock-out">Clock Out</option>
               <option value="start-lunch">Start Lunch</option>
               <option value="end-lunch">End Lunch</option>
             </select>
+          </div>
+          <div class="input-group">
+            <label for="manual-time">Time</label>
+            <input id="form-time" class="form-input edit" type="time" name="manual-time" />
           </div>
           <div class="input-group">
             <label for="manual-reason">Reason</label>
@@ -66,17 +66,16 @@
               <div class="entry-clock entry-times-container">
                 <p class="entry-clock-in entry-data">10:05am</p>
                 <p class="entry-clock-out entry-data"></p>
-
               </div>
               <div class="entry-lunch entry-times-container" data-lunch="true">
                 <p class="entry-lunch-in entry-data">12:00pm</p>
                 <p class="entry-lunch-out entry-data">12:30pm</p>
               </div>
             </div>
-            <h4 class="edit-entry">Edit</h4>
+            <button class="edit-entry">Edit</button>
           </div>
           <div class="entry">
-            <h3 class="entry-date">1/4/2024</h3>
+            <h3 class="entry-date">1/5/2024</h3>
             <div class="entry-times">
               <div class="entry-clock entry-times-container">
                 <p class="entry-clock-in entry-data">10:05am</p>
@@ -88,7 +87,7 @@
                 <p class="entry-lunch-out entry-data">12:30pm</p>
               </div>
             </div>
-            <h4 class="edit-entry">Edit</h4>
+            <button class="edit-entry">Edit</button>
           </div>
           <div class="entry">
             <h3 class="entry-date">1/6/2024</h3>
@@ -103,7 +102,7 @@
                 <p class="entry-lunch-out entry-data">12:30pm</p>
               </div>
             </div>
-            <h4 class="edit-entry">Edit</h4>
+            <button class="edit-entry">Edit</button>
           </div>
       </div>
     </div>

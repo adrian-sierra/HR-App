@@ -394,6 +394,9 @@ ul > li {
   align-self: center;
   border-radius: 10px;
   box-shadow: 0 0 0 2px var(--accent-color);
+  border: 0;
+  color: var(--accent-color);
+  background-color: var(--primary-color);
 }
 .edit-entry:hover {
   box-shadow: 0 0 0 2px var(--background-color);
