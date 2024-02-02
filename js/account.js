@@ -18,13 +18,23 @@ function assignTab(tab, card) {
   tab.classList.add("active");
   card.classList.remove("hide");
 }
-function newTab(tab, card) {
-  if (activeTab() != false) {
-    let [currentTab, currentCard] = activeTab();
-    resetPrevious(currentTab, currentCard);
-    assignTab(tab, card);
+function newTab(tab, card, type) {
+  if (type === "header") {
+    if (activeTab() != false) {
+      let [currentTab, currentCard] = activeTab();
+      resetPrevious(currentTab, currentCard);
+      assignTab(tab, card);
+    } else {
+      assignTab(tab, card);
+    }
   } else {
-    assignTab(tab, card);
+    if (activeSubTab() != false) {
+      let [currentTab, currentCard] = activeSubTab();
+      resetPrevious(currentTab, currentCard);
+      assignTab(tab, card);
+    } else {
+      assignTab(tab, card);
+    }
   }
 }
 function activeTab() {
@@ -35,41 +45,27 @@ function activeTab() {
   }
   return false;
 }
-const card_items = document.querySelectorAll(".card-item");
-const card_containers = document.querySelectorAll(".card");
-for (let i = 0; i < card_items.length; i++) {
-  card_items[i].addEventListener("click", () => {
-    newTab(card_items[i], card_containers[i]);
-  });
-}
-function resetContent(subset) {
-  subset.classList.remove("active");
-}
-function assignContent(subset) {
-  subset.classList.add("active");
-}
-function newContent(subset) {
-  if (activeContent() != false) {
-    resetContent(activeContent());
-    assignContent(subset);
-  } else {
-    assignContent(subset);
-  }
-}
-function activeContent() {
-  for (let i = 0; i < item_subsets.length; i++) {
-    if (item_subsets[i].classList.contains("active")) {
-      return item_subsets[i];
+
+function activeSubTab() {
+  for (let i = 0; i < sub_card_items.length; i++) {
+    if (sub_card_items[i].classList.contains("active")) {
+      return [sub_card_items[i], sub_card_containers[i]];
     }
   }
   return false;
 }
-const item_subsets = document.querySelectorAll(".item-subset");
-for (let i = 0; i < item_subsets.length; i++) {
-  item_subsets[i].addEventListener("click", () => {
-    const subset_content = document.querySelectorAll(".subset-content");
-    subset_content[i].classList.toggle("hide");
-    // item_subsets[i].classList.toggle("active");
-    newContent(item_subsets[i]);
+const card_items = document.querySelectorAll(".card-item");
+const card_containers = document.querySelectorAll(".card");
+for (let i = 0; i < card_items.length; i++) {
+  card_items[i].addEventListener("click", () => {
+    newTab(card_items[i], card_containers[i], "header");
+  });
+}
+
+const sub_card_items = document.querySelectorAll(".sub-card-item");
+const sub_card_containers = document.querySelectorAll(".sub-card");
+for (let i = 0; i < sub_card_items.length; i++) {
+  sub_card_items[i].addEventListener("click", () => {
+    newTab(sub_card_items[i], sub_card_containers[i], "sub");
   });
 }
