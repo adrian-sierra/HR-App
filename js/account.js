@@ -20,8 +20,8 @@ function assignTab(tab, card) {
 }
 function newTab(tab, card, type) {
   if (type === "header") {
-    if (activeTab() != false) {
-      let [currentTab, currentCard] = activeTab();
+    if (activeHeaderTab() != false) {
+      let [currentTab, currentCard] = activeHeaderTab();
       resetPrevious(currentTab, currentCard);
       assignTab(tab, card);
     } else {
@@ -37,7 +37,7 @@ function newTab(tab, card, type) {
     }
   }
 }
-function activeTab() {
+function activeHeaderTab() {
   for (let i = 0; i < card_items.length; i++) {
     if (card_items[i].classList.contains("active")) {
       return [card_items[i], card_containers[i]];
@@ -45,7 +45,6 @@ function activeTab() {
   }
   return false;
 }
-
 function activeSubTab() {
   for (let i = 0; i < sub_card_items.length; i++) {
     if (sub_card_items[i].classList.contains("active")) {
@@ -54,10 +53,24 @@ function activeSubTab() {
   }
   return false;
 }
+function resetSubTabs() {
+  for (let i = 0; i < sub_card_items.length; i++) {
+    if (sub_card_items[i].classList.contains("active")) {
+      sub_card_items[i].classList.remove("active");
+      sub_card_containers[i].classList.add("hide");
+    }
+  }
+}
 const card_items = document.querySelectorAll(".card-item");
 const card_containers = document.querySelectorAll(".card");
 for (let i = 0; i < card_items.length; i++) {
   card_items[i].addEventListener("click", () => {
+    if (activeHeaderTab() != false) {
+      let [currentTab, currentCard] = activeHeaderTab();
+      if (card_items[i] != currentTab) {
+        resetSubTabs();
+      }
+    }
     newTab(card_items[i], card_containers[i], "header");
   });
 }

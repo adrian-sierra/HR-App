@@ -83,7 +83,7 @@ header {
   text-decoration: none;
   color: var(--accent-color);
 }
-ul {
+.mobile-list {
   font-size: 1.25rem;
   text-transform: uppercase;
   list-style: none;
@@ -224,9 +224,9 @@ ul > li {
   font-weight: 600;
   color: var(--money-color);
 }
-.date-block {
+/* .date-block {
   color: var(--background-color);
-}
+} */
 .dashboard-btn {
   cursor: pointer;
   color: var(--background-color);
@@ -480,45 +480,56 @@ td {
 .main-card {
   --brdr-radius: 10px;
   margin-top: 5vh;
-  border: 2px solid var(--primary-color);
-  padding: 0.75rem 1rem;
+  /* height: min(50vh, 700px); */
+  padding: 1rem;
   background-color: var(--primary-color);
-  display: grid;
+  border: 5px solid var(--accent-color);
+  border-radius: var(--brdr-radius);
 }
+
 .main-links {
   display: grid;
-  grid-auto-flow: column;
-  gap: 0.25rem;
-  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  align-items: center;
+  width: 62.5%;
+  margin: 0 auto;
 }
 
 .list-item {
   cursor: pointer;
   background-color: var(--accent-color);
   color: var(--background-color);
-  padding: 5px;
-  /* width: 33%; */
+  display: grid;
+  place-content: center;
   text-align: center;
   border-radius: var(--brdr-radius);
+  height: 30px;
 }
 .card {
-  padding: 0.75rem 0rem;
-  background-color: var(--accent-color);
-  margin-top: 0.5rem;
-  color: var(--background-color);
+  padding: 0.75rem;
+  border: 2.5px solid var(--accent-color);
+  margin-top: 1rem;
+  border-radius: var(--brdr-radius);
+  background-color: var(--background-color);
 }
 .item-content {
-  display: flex;
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
   gap: 0.25rem;
-  /* border: 2px solid var(--accent-color); */
 }
 .sub-card-item {
-  background-color: var(--background-color);
-  color: var(--accent-color);
-  width: 33%;
+  padding: 7.5px;
+}
+.sub-card {
+  margin-top: 0.75rem;
+}
+.position-responsibilities,
+.department-list {
+  list-style-position: inside;
 }
 .active {
-  background-color: green;
+  background-color: var(--money-color);
 }
 /* Hiding elements styling */
 .hide {
