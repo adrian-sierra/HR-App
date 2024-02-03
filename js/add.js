@@ -17,26 +17,57 @@ function removeTitles() {
     edit_titles[i].classList.add("hide");
   }
 }
+function addTitles() {
+  for (let i = 0; i < edit_titles.length; i++) {
+    if (edit_titles[i].classList.contains("hide")) {
+      edit_titles[i].classList.remove("hide");
+    }
+  }
+}
 const edit_entries = document.querySelectorAll(".entry");
-function removeButtons(idx) {
+function removeEntries(idx) {
   for (let i = 0; i < edit_buttons.length; i++) {
     if (i != idx) {
       edit_entries[i].classList.add("hide");
     }
   }
 }
+function addEntries() {
+  for (let i = 0; i < edit_entries.length; i++) {
+    if (edit_entries[i].classList.contains("hide")) {
+      edit_entries[i].classList.remove("hide");
+    }
+  }
+}
+
 const form_date = document.getElementById("form-date");
 const form_type = document.getElementById("form-type");
 const form_time = document.getElementById("form-time");
-function insertData() {
-  form_date.valueAsDate = "1/4/2024";
+function insertData(date) {
+  form_date.valueAsDate = date;
   form_type.value = "clock-out";
 }
+function removeData() {
+  form_date.value = "";
+  form_type.value = "";
+}
+
 const edit_buttons = document.querySelectorAll(".edit-entry");
+const edit_dates = document.querySelectorAll(".entry-date");
+const go_back_button = document.getElementById("go-back-btn");
 for (let i = 0; i < edit_buttons.length; i++) {
   edit_buttons[i].addEventListener("click", () => {
-    removeButtons(i);
+    // console.log(edit_dates[i].textContent);
+    removeEntries(i);
     removeTitles();
-    insertData();
+    insertData(edit_dates[i].textContent);
+    go_back_button.classList.remove("hide");
   });
 }
+
+go_back_button.addEventListener("click", () => {
+  addTitles();
+  addEntries();
+  removeData();
+  go_back_button.classList.add("hide");
+});

@@ -34,7 +34,12 @@
         <div class="manual-entry">
           <div class="input-group">
             <label for="manual-date">Date</label>
-            <input id="form-date" class="form-input edit" type="date" name="manual-date" />
+            <input
+              id="form-date"
+              class="form-input edit"
+              type="date"
+              name="manual-date"
+            />
           </div>
           <div class="input-group">
             <label for="manual-type">Type</label>
@@ -48,11 +53,22 @@
           </div>
           <div class="input-group">
             <label for="manual-time">Time</label>
-            <input id="form-time" class="form-input edit" type="time" name="manual-time" />
+            <input
+              id="form-time"
+              class="form-input edit"
+              type="time"
+              name="manual-time"
+            />
           </div>
           <div class="input-group">
             <label for="manual-reason">Reason</label>
-            <textarea class="form-input edit" name="manual-reason" id="" cols="25" rows="5"></textarea>
+            <textarea
+              class="form-input edit"
+              name="manual-reason"
+              id=""
+              cols="25"
+              rows="5"
+            ></textarea>
           </div>
           <button class="add-form-btn dashboard-btn">Submit</button>
         </div>
@@ -80,7 +96,6 @@
               <div class="entry-clock entry-times-container">
                 <p class="entry-clock-in entry-data">10:05am</p>
                 <p class="entry-clock-out entry-data"></p>
-
               </div>
               <div class="entry-lunch entry-times-container" data-lunch="true">
                 <p class="entry-lunch-in entry-data">12:00pm</p>
@@ -95,7 +110,6 @@
               <div class="entry-clock entry-times-container">
                 <p class="entry-clock-in entry-data">10:05am</p>
                 <p class="entry-clock-out entry-data"></p>
-
               </div>
               <div class="entry-lunch entry-times-container" data-lunch="true">
                 <p class="entry-lunch-in entry-data">12:00pm</p>
@@ -104,7 +118,9 @@
             </div>
             <button class="edit-entry">Edit</button>
           </div>
+        </div>
       </div>
+      <button id="go-back-btn" class="dashboard-btn hide">Go Back</button>
     </div>
   </body>
 </html>
