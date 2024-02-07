@@ -1,0 +1,9 @@
+@import "./reset";
+@import "./variables";
+@import "./mixins";
+
+.index {
+  @include loginContainer;
+
+  font-size: $fsText;
+}

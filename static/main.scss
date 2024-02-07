@@ -1,0 +1,18 @@
+@import "./variables";
+@import "./reset";
+@import "./mixins";
+@import "./header";
+@import "./hide";
+
+body {
+  font-family: $fontFamily;
+  min-height: 100vh;
+  background-color: $colorBackground;
+  margin-inline: $pageLeftRightPadding;
+}
+a {
+  text-decoration: none;
+}
+
+// Index page
+@import "./index";

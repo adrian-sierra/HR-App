@@ -1,0 +1,158 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+.page-header__logo {
+  width: 55px;
+}
+.page-header__title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: hsl(0, 100%, 100%);
+}
+.page-header__mobile {
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  background-size: contain;
+}
+.page-header__mobile[data-icon=open] {
+  background-image: url(../images/hamburger.svg);
+}
+.page-header__mobile[data-icon=close] {
+  z-index: 9999;
+  background-image: url(../images/x.svg);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.hide-element {
+  opacity: 0;
+  cursor: default;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  min-height: 100vh;
+  background-color: hsl(206, 9%, 15%);
+  margin-inline: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+.index {
+  border: 2px solid hsl(0, 100%, 100%);
+  border-radius: 0.675rem;
+  width: min(400px, 100vw - 3rem);
+  display: grid;
+  margin: 0 auto;
+  margin-top: 25%;
+  gap: 2rem;
+  padding: 1.5rem;
+  background-color: hsl(204, 2%, 43%);
+  font-size: 0.925rem;
+}/*# sourceMappingURL=main.css.map */

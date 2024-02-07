@@ -10,46 +10,50 @@
       href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" href="static/main.css" />
     <script src="js/script.js" defer></script>
   </head>
   <body>
-    <header>
-      <img class="logo" src="images/logo.png" alt="Clock face logo" />
-      <a href="index.html"><h1 class="page-title">Tempus</h1></a>
+    <header class="page-header">
+      <img
+        class="page-header__logo"
+        src="images/logo.png"
+        alt="Clock face logo"
+      />
+      <a href="index.html"><h1 class="page-header__title">Tempus</h1></a>
       <a
         href="index.html"
-        class="mobile-icon hide-element"
+        class="page-header__mobile hide-element"
         data-icon="open"
         style="pointer-events: none"
       ></a>
     </header>
-    <div class="main-container">
-      <form id="login-form" class="login-form form" action="#">
-        <div class="input-container">
-          <div class="label-input">
+    <div class="index">
+      <form id="login-form" class="index__form form" action="#">
+        <div class="index-input">
+          <div class="index-input__groups">
             <label for="company">Company</label>
             <input
-              class="login-input form-input"
+              class="index-input__input"
               type="text"
               id="login-company"
               name="company"
             />
           </div>
-          <div class="label-input">
+          <div class="index-input__groups">
             <label for="username">Email</label>
             <input
-              class="login-input form-input"
+              class="index-input__input"
               type="email"
               id="login-email"
               name="email"
               required
             />
           </div>
-          <div class="label-input">
+          <div class="index-input__groups">
             <label for="password">Password</label>
             <input
-              class="login-input form-input"
+              class="index-input__input"
               type="password"
               id="login-password"
               name="password"
@@ -57,15 +61,15 @@
             />
           </div>
         </div>
-        <a class="fake-button" href="dashboard.html">Log In</a>
+        <a class="index__button" href="dashboard.html">Log In</a>
         <!-- <button class="submit-btn btn" id="submit-btn" type="submit">
           Log In
         </button> -->
       </form>
-      <div class="new-user">
-        <p class="login-help">New User? <a href="create.html">Register</a></p>
-        <!-- <p class="login-forgot"><a href="#">Forgot Password?</a></p> -->
-      </div>
+      <!-- <div class="index__help"> -->
+      <p class="index__help">New User? <a href="create.html">Register</a></p>
+      <!-- <p class="login-forgot"><a href="#">Forgot Password?</a></p> -->
+      <!-- </div> -->
     </div>
   </body>
 </html>

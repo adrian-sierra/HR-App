@@ -1,0 +1,11 @@
+@import "./reset";
+@import "./mixins";
+@import "./variables";
+
+.hide {
+  display: none;
+}
+.hide-element {
+  opacity: 0;
+  cursor: default;
+}

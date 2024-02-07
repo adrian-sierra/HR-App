@@ -1,0 +1,18 @@
+@import "./variables";
+
+@mixin borders($line-width: 2px, $color) {
+  border: $line-width solid $color;
+  border-radius: $borderRadius;
+}
+
+// for index.html and create.html pages
+@mixin loginContainer {
+  @include borders(2px, $colorPrimaryContent);
+  width: min(400px, 100vw - ($pageLeftRightPadding * 2));
+  display: grid;
+  margin: 0 auto;
+  margin-top: 25%;
+  gap: 2rem;
+  padding: 1.5rem;
+  background-color: $colorSecondaryContent;
+}

@@ -1,0 +1,32 @@
+@import "./reset";
+@import "./variables";
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  &__logo {
+    width: $mobileImageSize;
+  }
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: $fsHeader;
+    font-weight: $fwMedium;
+    color: $colorPrimaryContent;
+  }
+  &__mobile {
+    cursor: pointer;
+    width: $mobileImageSize;
+    height: $mobileImageSize;
+    background-size: contain;
+  }
+  &__mobile[data-icon="open"] {
+    background-image: url(../images/hamburger.svg);
+  }
+  &__mobile[data-icon="close"] {
+    z-index: 9999;
+    background-image: url(../images/x.svg);
+  }
+}
