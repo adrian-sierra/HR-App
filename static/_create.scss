@@ -1,0 +1,56 @@
+.create {
+  @include loginContainer;
+
+  &__form {
+    @include gridGap(2.25rem);
+
+    .create-input {
+      @include gridGap(1.125rem);
+      grid-auto-flow: row;
+
+      &__groups {
+        @include gridGap(0.375rem);
+      }
+      &__input {
+        @include loginInputs;
+
+        &:focus {
+          @include activeInput;
+        }
+      }
+      &__names {
+        display: flex;
+        width: 107.5%;
+
+        .create-input__groups {
+          .create-input__input {
+            width: 85%;
+          }
+        }
+      }
+    }
+  }
+  &__button {
+    display: grid;
+  }
+  .sign-up {
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.thanks {
+  @include gridGap(1rem);
+  text-align: center;
+  margin-top: 25vh;
+
+  &__text {
+    font-size: 2rem;
+    color: $colorPrimaryContent;
+  }
+  &__button {
+    background-color: $colorSecondaryContent;
+    width: min(60%, 250px);
+    margin: 0 auto;
+  }
+}

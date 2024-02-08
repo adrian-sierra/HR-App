@@ -1,0 +1,25 @@
+.mobile-links {
+  z-index: 999;
+  position: absolute;
+  color: $colorPrimaryContent;
+  background-color: $colorSecondaryContent;
+  inset: 0 0 0 20vw;
+
+  &__list {
+    a {
+      color: $colorPrimaryContent;
+      &:hover {
+        color: $colorBackground;
+      }
+    }
+    li {
+      cursor: pointer;
+    }
+    font-size: 0.975rem;
+    text-transform: uppercase;
+    list-style: none;
+    @include gridGap(2rem);
+    margin-top: 50%;
+    margin-left: 3rem;
+  }
+}

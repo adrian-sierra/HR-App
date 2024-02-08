@@ -181,7 +181,6 @@ ul > li {
 }
 .thanks-text {
   font-size: 2rem;
-
   color: var(--primary-color);
 }
 .thanks-container > .fake-button {

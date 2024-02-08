@@ -1,9 +1,24 @@
-@import "./reset";
-@import "./variables";
-@import "./mixins";
-
 .index {
   @include loginContainer;
+  @include gridGap(2rem);
 
-  font-size: $fsText;
+  &__form {
+    @include gridGap(2.25rem);
+
+    .index-input {
+      @include gridGap(1.125rem);
+      grid-auto-flow: row;
+
+      &__groups {
+        @include gridGap(0.375rem);
+      }
+      &__input {
+        @include loginInputs;
+
+        &:focus {
+          @include activeInput;
+        }
+      }
+    }
+  }
 }

@@ -2,7 +2,8 @@
 @import "./reset";
 @import "./mixins";
 @import "./header";
-@import "./hide";
+@import "./button";
+@import "./mobileLinks";
 
 body {
   font-family: $fontFamily;
@@ -16,3 +17,12 @@ a {
 
 // Index page
 @import "./index";
+
+// Create page
+@import "./create";
+
+// Dashboard page
+@import "./dashboard";
+
+@import "./hide";
+@import "./active";
