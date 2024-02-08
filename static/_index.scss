@@ -12,13 +12,6 @@
       &__groups {
         @include gridGap(0.375rem);
       }
-      &__input {
-        @include loginInputs;
-
-        &:focus {
-          @include activeInput;
-        }
-      }
     }
   }
 }

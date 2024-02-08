@@ -18,14 +18,3 @@
   background-color: $colorSecondaryContent;
   font-size: $fsText;
 }
-
-@mixin loginInputs {
-  outline: none;
-  border: 0;
-  border-radius: $borderRadius * 0.375;
-  padding: 0.25em;
-}
-
-@mixin activeInput {
-  box-shadow: 0 0 3.5px 1.25px $colorOutline;
-}

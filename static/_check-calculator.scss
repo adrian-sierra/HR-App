@@ -1,0 +1,38 @@
+.check {
+  color: $colorPrimaryContent;
+  font-size: $fsText;
+  &__current {
+    margin-bottom: 5rem;
+
+    .current-container {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 1fr 0.575fr;
+      .check-form {
+        @include gridGap(0.5rem);
+
+        &__group {
+          display: grid;
+          grid-auto-flow: column;
+          grid-template-columns: 0.425fr 1fr;
+
+          input {
+            width: 100px;
+          }
+        }
+        &__button {
+          width: 70%;
+          margin-top: 0.5rem;
+        }
+      }
+      .check-result {
+        display: grid;
+        font-weight: $fwMedium;
+
+        .check-calculation {
+          color: $colorOutline;
+        }
+      }
+    }
+  }
+}

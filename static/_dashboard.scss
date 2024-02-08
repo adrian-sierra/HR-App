@@ -25,10 +25,5 @@
         color: $colorAccent;
       }
     }
-    .dashboard-btn {
-      @extend .btn;
-      @include borders(2px, $colorPrimaryContent);
-      background-color: $colorSecondaryContent;
-    }
   }
 }

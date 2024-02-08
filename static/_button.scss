@@ -1,17 +1,1 @@
-@import "./variables";
-@import "./mixins";
 
-.btn {
-  cursor: pointer;
-  border: 0;
-  background-color: $colorBackground;
-  color: $colorPrimaryContent;
-  text-align: center;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  border-radius: 100vw;
-
-  &:hover {
-    opacity: 0.675;
-  }
-}

@@ -1,0 +1,13 @@
+table {
+  text-align: center;
+  margin: 0 auto;
+}
+th {
+  font-weight: 600;
+}
+table,
+th,
+td {
+  border: 2px solid $colorPrimaryContent;
+  border-collapse: collapse;
+}
