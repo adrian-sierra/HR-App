@@ -18,3 +18,9 @@
   background-color: $colorSecondaryContent;
   font-size: $fsText;
 }
+
+@mixin contentContainer($padding: 0, $backgroundColor: $colorSecondaryContent) {
+  @include borders(2.5px, $colorPrimaryContent);
+  background-color: $backgroundColor;
+  padding: $padding;
+}

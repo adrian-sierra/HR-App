@@ -19,7 +19,6 @@
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   border-radius: 100vw;
-
   &:hover {
     opacity: 0.675;
   }
@@ -27,8 +26,7 @@
 
 .dashboard-btn {
   @extend .btn;
-  @include borders(2px, $colorPrimaryContent);
-  background-color: $colorSecondaryContent;
+  @include contentContainer(0.5rem);
 }
 
 .list-item {
@@ -41,13 +39,6 @@
   border-radius: $borderRadius;
   height: 30px;
   list-style: none;
-}
-
-.card {
-  padding: 1rem;
-  @include borders(2.5px, $colorPrimaryContent);
-  margin-top: 1rem;
-  background-color: $colorBackground;
 }
 
 .form-input {

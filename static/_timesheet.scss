@@ -1,0 +1,75 @@
+.timesheet {
+  color: $colorPrimaryContent;
+  width: min(90vw, 650px);
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  &__entry {
+    @include contentContainer(0.75rem);
+    @include gridGap(1rem);
+    grid-auto-flow: column;
+    gap: 0.25rem;
+    text-align: center;
+    justify-items: center;
+    font-weight: $fwMedium;
+    font-size: 0.875rem;
+    .entry-date,
+    .entry-data,
+    .entry-total {
+      display: grid;
+      align-items: center;
+    }
+    .divider {
+      background-color: $colorPrimaryContent;
+      width: 2px;
+    }
+    .entry-times-container[data-lunch="true"] {
+      margin-top: 0.5rem;
+    }
+    .entry-times-container {
+      padding-top: 0.5rem;
+      display: flex;
+      justify-content: space-evenly;
+      gap: 0.5rem;
+      .entry-data {
+        color: $colorBackground;
+        background-color: $colorPrimaryContent;
+        text-align: left;
+        border-radius: $borderRadius;
+        position: relative;
+        width: min(50%, 100px);
+        padding: 0.5rem 0.15rem;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -52.5%;
+          left: 0;
+          font-size: 0.75rem;
+          color: $colorPrimaryContent;
+        }
+      }
+      .entry-lunch-in,
+      .entry-lunch-out {
+        margin-top: 0.5rem;
+      }
+      .entry-clock-in::before {
+        content: "Clock In";
+      }
+      .entry-clock-out::before {
+        content: "Clock Out";
+      }
+      .entry-lunch-in::before {
+        content: "Lunch In";
+      }
+      .entry-lunch-out::before {
+        content: "Lunch Out";
+      }
+    }
+    .entry-lunch[data-lunch="false"] {
+      display: none;
+    }
+    .entry-total {
+      color: $colorOutline;
+    }
+  }
+}
