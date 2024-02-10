@@ -1,40 +1,30 @@
 @import "./variables";
 @import "./reset";
 @import "./mixins";
-@import "./header";
-@import "./button";
-@import "./mobileLinks";
 @import "./classes";
-@import "./table";
 
-body {
-  font-family: $fontFamily;
-  min-height: 100vh;
-  background-color: $colorBackground;
-  margin-inline: $pageLeftRightPadding;
-}
-a {
-  text-decoration: none;
-}
+// COMPONENTS
+@import "./components/header";
+@import "./components/mobileLinks";
+@import "./components/table";
+@import "./components/body";
 
-// Index page
-@import "./index";
+// PAGES
+// Index
+@import "./pages/index";
+// Create
+@import "./pages/create";
+// Dashboard
+@import "./pages/dashboard";
+// Account info
+@import "./pages/account-info";
+// Paycheck calculator
+@import "./pages/check-calculator";
+// Timesheet
+@import "./pages/timesheet";
+// Add punch
+@import "./pages/add-punch";
 
-// Create page
-@import "./create";
-
-// Dashboard page
-@import "./dashboard";
-
-// Account info page
-@import "./account-info";
-
-// Paycheck calculator page
-@import "./check-calculator";
-
-// Timesheet page
-@import "./timesheet";
-
-// Class modifiers
-@import "./hide";
-@import "./active";
+// MODIFIERS
+@import "./modifiers/hide";
+@import "./modifiers/active";

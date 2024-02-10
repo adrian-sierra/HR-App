@@ -1,0 +1,42 @@
+.add {
+  text-align: center;
+  color: $colorPrimaryContent;
+  font-size: 0.875rem;
+  padding-bottom: 3rem;
+  display: grid;
+  gap: 2.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+  &__auto {
+    @include gridGap(1rem);
+  }
+  .entry {
+    display: grid;
+    gap: 0.5rem;
+    width: 50%;
+    margin: 0 auto;
+    &__group {
+      display: grid;
+      gap: 0.25rem;
+    }
+    &__button {
+      margin-top: 0.5rem;
+    }
+  }
+  // &__button {
+  //   width: 50%;
+  //   margin: 0 auto;
+  // }
+}
+.entry__edit {
+  cursor: pointer;
+  display: grid;
+  align-self: center;
+  @include contentContainer();
+  border-radius: 100vw;
+  padding: 0.25rem 0.5rem;
+  color: $colorPrimaryContent;
+  &:hover {
+    opacity: 0.675;
+  }
+}

@@ -13,7 +13,6 @@
     }
     .sub-cards {
       color: $colorPrimaryContent;
-      // @include contentContainer();
       .card {
         margin-top: 1rem;
         @include contentContainer(1rem, $colorBackground);

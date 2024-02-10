@@ -8,17 +8,21 @@
       href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" href="static/main.css" />
     <script src="js/add.js" defer></script>
   </head>
 
   <body class="add-punch-body">
-    <header>
-      <img class="logo" src="images/logo.png" alt="Clock face logo" />
-      <a href="dashboard.html"><h1 class="page-title">Tempus</h1></a>
-      <div id="nav-icon" class="mobile-icon" data-icon="open"></div>
-      <div id="links-element" class="links-container hide">
-        <ul class="mobile-list">
+    <header class="page-header">
+      <img
+        class="page-header__logo"
+        src="images/logo.png"
+        alt="Clock face logo"
+      />
+      <a href="dashboard.html"><h1 class="page-header__title">Tempus</h1></a>
+      <a id="nav-icon" class="page-header__mobile" data-icon="open"></a>
+      <div id="links-element" class="mobile-links hide">
+        <ul class="mobile-links__list">
           <a href="dashboard.html"><li>Home</li></a>
           <a href="account-info.html"><li>Account Info</li></a>
           <a href="check-calculator.html"><li>Paycheck Calculator</li></a>
@@ -28,99 +32,105 @@
         </ul>
       </div>
     </header>
-    <div class="add-main-content">
-      <form action="#" id="manual-form" class="add-form">
-        <h1 class="entry-titles">Manual Entry</h1>
-        <div class="manual-entry">
-          <div class="input-group">
+    <div class="add">
+      <form action="#" id="manual-form" class="add__manual manual">
+        <h1 class="manual__title dashboard-title">Manual Entry</h1>
+        <div class="manual__entry entry">
+          <div class="entry__group">
             <label for="manual-date">Date</label>
             <input
               id="form-date"
-              class="form-input edit"
+              class="form-input"
               type="date"
               name="manual-date"
             />
           </div>
-          <div class="input-group">
+          <div class="entry__group">
             <label for="manual-type">Type</label>
-            <select id="form-type" class="form-input edit" name="type" id="">
+            <select id="form-type" class="form-input" name="type" id="">
               <option value="" disabled selected></option>
               <option value="clock-in">Clock In</option>
               <option value="clock-out">Clock Out</option>
-              <option value="start-lunch">Start Lunch</option>
-              <option value="end-lunch">End Lunch</option>
+              <option value="lunch-in">Start Lunch</option>
+              <option value="lunch-out">End Lunch</option>
             </select>
           </div>
-          <div class="input-group">
+          <div class="entry__group">
             <label for="manual-time">Time</label>
             <input
               id="form-time"
-              class="form-input edit"
+              class="form-input"
               type="time"
               name="manual-time"
             />
           </div>
-          <div class="input-group">
+          <div class="entry__group">
             <label for="manual-reason">Reason</label>
             <textarea
-              class="form-input edit"
+              class="form-input"
               name="manual-reason"
               id=""
               cols="25"
               rows="5"
             ></textarea>
           </div>
-          <button class="add-form-btn dashboard-btn">Submit</button>
+          <button class="entry__button dashboard-btn">Submit</button>
         </div>
       </form>
-      <div class="auto-form">
-        <h1 class="entry-titles">Edit Entry</h1>
-        <div class="entries-container entries" data-empty="false">
-          <div class="entry">
-            <h3 class="entry-date">1/4/2024</h3>
-            <div class="entry-times">
-              <div class="entry-clock entry-times-container">
-                <p class="entry-clock-in entry-data">10:05am</p>
-                <p class="entry-clock-out entry-data"></p>
-              </div>
-              <div class="entry-lunch entry-times-container" data-lunch="true">
-                <p class="entry-lunch-in entry-data">12:00pm</p>
-                <p class="entry-lunch-out entry-data">12:30pm</p>
-              </div>
+      <div class="add__auto">
+        <h1 class="entry-titles dashboard-title">Edit Entry</h1>
+        <div class="timesheet__entry">
+          <h3 class="entry-date">1/4/2024</h3>
+          <div class="divider"></div>
+          <div class="entry-times">
+            <div class="entry-clock entry-times-container">
+              <p class="entry-clock-in entry-data">10:05am</p>
+              <p class="entry-clock-out entry-data">2:30pm</p>
             </div>
-            <button class="edit-entry">Edit</button>
-          </div>
-          <div class="entry">
-            <h3 class="entry-date">1/5/2024</h3>
-            <div class="entry-times">
-              <div class="entry-clock entry-times-container">
-                <p class="entry-clock-in entry-data">10:05am</p>
-                <p class="entry-clock-out entry-data"></p>
-              </div>
-              <div class="entry-lunch entry-times-container" data-lunch="true">
-                <p class="entry-lunch-in entry-data">12:00pm</p>
-                <p class="entry-lunch-out entry-data">12:30pm</p>
-              </div>
+            <div class="entry-lunch entry-times-container" data-lunch="true">
+              <p class="entry-lunch-in entry-data">12:00pm</p>
+              <p class="entry-lunch-out entry-data"></p>
             </div>
-            <button class="edit-entry">Edit</button>
           </div>
-          <div class="entry">
-            <h3 class="entry-date">1/6/2024</h3>
-            <div class="entry-times">
-              <div class="entry-clock entry-times-container">
-                <p class="entry-clock-in entry-data">10:05am</p>
-                <p class="entry-clock-out entry-data"></p>
-              </div>
-              <div class="entry-lunch entry-times-container" data-lunch="true">
-                <p class="entry-lunch-in entry-data">12:00pm</p>
-                <p class="entry-lunch-out entry-data">12:30pm</p>
-              </div>
+          <div class="divider"></div>
+          <button class="entry__edit">Edit</button>
+        </div>
+        <div class="timesheet__entry">
+          <h3 class="entry-date">1/5/2024</h3>
+          <div class="divider"></div>
+          <div class="entry-times">
+            <div class="entry-clock entry-times-container">
+              <p class="entry-clock-in entry-data">10:05am</p>
+              <p class="entry-clock-out entry-data">2:30pm</p>
             </div>
-            <button class="edit-entry">Edit</button>
+            <div class="entry-lunch entry-times-container" data-lunch="true">
+              <p class="entry-lunch-in entry-data">12:00pm</p>
+              <p class="entry-lunch-out entry-data"></p>
+            </div>
           </div>
+          <div class="divider"></div>
+          <button class="entry__edit">Edit</button>
+        </div>
+        <div class="timesheet__entry">
+          <h3 class="entry-date">1/6/2024</h3>
+          <div class="divider"></div>
+          <div class="entry-times">
+            <div class="entry-clock entry-times-container">
+              <p class="entry-clock-in entry-data">10:05am</p>
+              <p class="entry-clock-out entry-data">2:30pm</p>
+            </div>
+            <div class="entry-lunch entry-times-container" data-lunch="true">
+              <p class="entry-lunch-in entry-data">12:00pm</p>
+              <p class="entry-lunch-out entry-data"></p>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <button class="entry__edit">Edit</button>
         </div>
       </div>
-      <button id="go-back-btn" class="dashboard-btn hide">Go Back</button>
+      <button id="go-back-btn" class="add__button dashboard-btn hide">
+        Go Back
+      </button>
     </div>
   </body>
 </html>

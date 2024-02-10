@@ -22,28 +22,63 @@ svg {
   display: block;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+a {
+  text-decoration: none;
 }
 
-html,
-body {
-  height: 100%;
+.dashboard-title {
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  border: 5px solid hsl(204, 2%, 43%);
+  padding: 0.5rem 0;
+  text-align: center;
+  font-weight: 500;
+  color: hsl(0, 100%, 100%);
+  margin-top: 5vh;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  font: inherit;
+.btn, .dashboard-btn {
+  cursor: pointer;
+  border: 0;
+  background-color: hsl(206, 9%, 15%);
+  color: hsl(0, 100%, 100%);
+  text-align: center;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-radius: 100vw;
+}
+.btn:hover, .dashboard-btn:hover {
+  opacity: 0.675;
 }
 
-img,
-picture,
-svg {
-  max-width: 100%;
-  display: block;
+.dashboard-btn {
+  border: 2.5px solid hsl(0, 100%, 100%);
+  border-radius: 0.675rem;
+  background-color: hsl(204, 2%, 43%);
+  padding: 0.5rem;
+}
+
+.list-item {
+  cursor: pointer;
+  background-color: hsl(0, 100%, 100%);
+  color: hsl(206, 9%, 15%);
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border-radius: 0.675rem;
+  height: 30px;
+  list-style: none;
+}
+
+.form-input {
+  outline: none;
+  border: 0;
+  border-radius: 0.253125rem;
+  padding: 0.25em;
+}
+.form-input:focus {
+  box-shadow: 0 0 3.5px 1.25px hsl(100, 100%, 40%);
 }
 
 .page-header {
@@ -102,61 +137,6 @@ svg {
   cursor: pointer;
 }
 
-.dashboard-title {
-  margin-bottom: 1.25rem;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  border: 5px solid hsl(204, 2%, 43%);
-  padding: 0.5rem 0;
-  text-align: center;
-  font-weight: 500;
-  color: hsl(0, 100%, 100%);
-  margin-top: 5vh;
-}
-
-.btn, .dashboard-btn {
-  cursor: pointer;
-  border: 0;
-  background-color: hsl(206, 9%, 15%);
-  color: hsl(0, 100%, 100%);
-  text-align: center;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  border-radius: 100vw;
-}
-.btn:hover, .dashboard-btn:hover {
-  opacity: 0.675;
-}
-
-.dashboard-btn {
-  border: 2.5px solid hsl(0, 100%, 100%);
-  border-radius: 0.675rem;
-  background-color: hsl(204, 2%, 43%);
-  padding: 0.5rem;
-}
-
-.list-item {
-  cursor: pointer;
-  background-color: hsl(0, 100%, 100%);
-  color: hsl(206, 9%, 15%);
-  display: grid;
-  place-content: center;
-  text-align: center;
-  border-radius: 0.675rem;
-  height: 30px;
-  list-style: none;
-}
-
-.form-input {
-  outline: none;
-  border: 0;
-  border-radius: 0.253125rem;
-  padding: 0.25em;
-}
-.form-input:focus {
-  box-shadow: 0 0 3.5px 1.25px hsl(100, 100%, 40%);
-}
-
 table {
   text-align: center;
   margin: 0 auto;
@@ -178,10 +158,6 @@ body {
   min-height: 100vh;
   background-color: hsl(206, 9%, 15%);
   margin-inline: 1.5rem;
-}
-
-a {
-  text-decoration: none;
 }
 
 .index {
@@ -376,7 +352,6 @@ a {
 
 .timesheet {
   color: hsl(0, 100%, 100%);
-  width: min(90vw, 650px);
   margin: 0 auto;
   display: grid;
   gap: 1rem;
@@ -385,7 +360,8 @@ a {
   border: 2.5px solid hsl(0, 100%, 100%);
   border-radius: 0.675rem;
   background-color: hsl(204, 2%, 43%);
-  padding: 0.75rem;
+  padding: 0.375rem;
+  padding: 0.75rem 0;
   display: grid;
   gap: 1rem;
   grid-auto-flow: column;
@@ -428,7 +404,7 @@ a {
   position: absolute;
   top: -52.5%;
   left: 0;
-  font-size: 0.75rem;
+  font-size: 0.675rem;
   color: hsl(0, 100%, 100%);
 }
 .timesheet__entry .entry-times-container .entry-lunch-in,
@@ -454,28 +430,48 @@ a {
   color: hsl(100, 100%, 40%);
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.add {
+  text-align: center;
+  color: hsl(0, 100%, 100%);
+  font-size: 0.875rem;
+  padding-bottom: 3rem;
+  display: grid;
+  gap: 2.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.add__auto {
+  display: grid;
+  gap: 1rem;
+}
+.add .entry {
+  display: grid;
+  gap: 0.5rem;
+  width: 50%;
+  margin: 0 auto;
+}
+.add .entry__group {
+  display: grid;
+  gap: 0.25rem;
+}
+.add .entry__button {
+  margin-top: 0.5rem;
 }
 
-html,
-body {
-  height: 100%;
-}
-
-* {
-  margin: 0;
+.entry__edit {
+  cursor: pointer;
+  display: grid;
+  align-self: center;
+  border: 2.5px solid hsl(0, 100%, 100%);
+  border-radius: 0.675rem;
+  background-color: hsl(204, 2%, 43%);
   padding: 0;
-  font: inherit;
+  border-radius: 100vw;
+  padding: 0.25rem 0.5rem;
+  color: hsl(0, 100%, 100%);
 }
-
-img,
-picture,
-svg {
-  max-width: 100%;
-  display: block;
+.entry__edit:hover {
+  opacity: 0.675;
 }
 
 .hide {

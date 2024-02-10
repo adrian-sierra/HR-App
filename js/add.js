@@ -24,7 +24,7 @@ function addTitles() {
     }
   }
 }
-const edit_entries = document.querySelectorAll(".entry");
+const edit_entries = document.querySelectorAll(".timesheet__entry");
 function removeEntries(idx) {
   for (let i = 0; i < edit_buttons.length; i++) {
     if (i != idx) {
@@ -45,14 +45,14 @@ const form_type = document.getElementById("form-type");
 const form_time = document.getElementById("form-time");
 function insertData(date) {
   form_date.valueAsDate = date;
-  form_type.value = "clock-out";
+  form_type.value = "lunch-out";
 }
 function removeData() {
   form_date.value = "";
   form_type.value = "";
 }
 
-const edit_buttons = document.querySelectorAll(".edit-entry");
+const edit_buttons = document.querySelectorAll(".entry__edit");
 const edit_dates = document.querySelectorAll(".entry-date");
 const go_back_button = document.getElementById("go-back-btn");
 for (let i = 0; i < edit_buttons.length; i++) {
