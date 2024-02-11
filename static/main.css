@@ -445,7 +445,7 @@ body {
 .add .entry {
   display: grid;
   gap: 0.5rem;
-  width: 50%;
+  width: 65%;
   margin: 0 auto;
 }
 .add .entry__group {
