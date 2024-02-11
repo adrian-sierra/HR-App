@@ -7,7 +7,6 @@
 
     .index-input {
       @include gridGap(1.125rem);
-      grid-auto-flow: row;
 
       &__groups {
         @include gridGap(0.375rem);

@@ -3,14 +3,14 @@
   text-align: center;
 
   &__message {
-    margin-top: 15vh;
+    margin-top: 10vh;
     font-size: 1.5rem;
   }
   &__punch {
     @include gridGap(1rem);
     width: 200px;
     margin: 0 auto;
-    margin-top: 4.5rem;
+    margin-top: 3.5rem;
 
     .date-time {
       margin-bottom: 2rem;

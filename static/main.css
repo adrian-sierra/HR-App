@@ -179,7 +179,6 @@ body {
 .index__form .index-input {
   display: grid;
   gap: 1.125rem;
-  grid-auto-flow: row;
 }
 .index__form .index-input__groups {
   display: grid;
@@ -203,7 +202,6 @@ body {
 .create__form .create-input {
   display: grid;
   gap: 1.125rem;
-  grid-auto-flow: row;
 }
 .create__form .create-input__groups {
   display: grid;
@@ -245,7 +243,7 @@ body {
   text-align: center;
 }
 .dashboard__message {
-  margin-top: 15vh;
+  margin-top: 10vh;
   font-size: 1.5rem;
 }
 .dashboard__punch {
@@ -253,7 +251,7 @@ body {
   gap: 1rem;
   width: 200px;
   margin: 0 auto;
-  margin-top: 4.5rem;
+  margin-top: 3.5rem;
 }
 .dashboard__punch .date-time {
   margin-bottom: 2rem;
@@ -489,4 +487,8 @@ body {
 
 .active-page {
   color: hsl(206, 9%, 15%);
+}
+
+.error {
+  box-shadow: 0 0 3.5px 1.25px red;
 }/*# sourceMappingURL=main.css.map */
