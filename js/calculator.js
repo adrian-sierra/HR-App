@@ -26,28 +26,38 @@ function checkEmptyFields(inputs) {
   }
   return error;
 }
+function clearPreviousAnswers() {
+  gross_result.textContent = "";
+  net_result.textContent = "";
+}
+
+function displayCheck(regular, OT, rate) {
+  let gross_total = 0;
+  let net_total;
+  if (OT > 0) {
+    regular += OT * 1.5;
+    gross_total += regular * rate;
+  } else {
+    gross_total += regularHours * rate;
+  }
+  net_total = (gross_total * 0.72).toFixed(2);
+  gross_total = gross_total.toFixed(2);
+  gross_result.textContent = "$" + gross_total;
+  net_result.textContent = "$" + net_total;
+}
 
 const gross_result = document.getElementById("gross-number");
 const net_result = document.getElementById("net-number");
-function calcTotal() {
+function calcProcess() {
+  clearPreviousAnswers();
   const check_inputs = document.querySelectorAll(".form-input");
   if (!checkEmptyFields(check_inputs)) {
-    let total_hours = parseFloat(check_inputs[0].value);
-    const total_ot = parseFloat(check_inputs[1].value);
-    const hourly_rate = parseFloat(check_inputs[2].value);
-    let gross_total = 0;
-    let net_total;
-    if (total_ot > 0) {
-      total_hours += total_ot * 1.5;
-      gross_total += total_hours * hourly_rate;
-    } else {
-      gross_total += total_hours * hourly_rate;
-    }
-    net_total = (gross_total * 0.72).toFixed(2);
-    gross_total = gross_total.toFixed(2);
-    gross_result.textContent = "$" + gross_total;
-    net_result.textContent = "$" + net_total;
+    displayCheck(
+      parseFloat(check_inputs[0].value),
+      parseFloat(check_inputs[1].value),
+      parseFloat(check_inputs[2].value)
+    );
   }
 }
 
-calc_button.addEventListener("click", calcTotal);
+calc_button.addEventListener("click", calcProcess);
