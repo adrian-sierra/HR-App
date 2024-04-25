@@ -108,7 +108,6 @@ a {
 }
 .page-header__mobile[data-icon=close] {
   z-index: 9999;
-  background-image: url(../../../../src/images/x.svg);
 }
 
 .mobile-links {
@@ -159,6 +158,7 @@ body {
   min-height: 100vh;
   background-color: hsl(206, 9%, 15%);
   margin-inline: 1.5rem;
+  overflow-y: hidden;
 }
 
 .index {
@@ -430,7 +430,6 @@ body {
 }
 
 .add {
-  text-align: center;
   color: hsl(0, 100%, 100%);
   font-size: 0.875rem;
   padding-bottom: 3rem;
