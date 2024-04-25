@@ -104,13 +104,11 @@ a {
   background-size: contain;
 }
 .page-header__mobile[data-icon=open] {
-  background-image: url("../../../images/hamburger.png");
-  filter: invert(100%);
+  background-image: url(../../../images/hamburger.svg);
 }
 .page-header__mobile[data-icon=close] {
   z-index: 9999;
-  background-image: url("../../../images/x.png");
-  filter: invert(100%);
+  background-image: url(../../../images/x.svg);
 }
 
 .mobile-links {
