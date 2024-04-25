@@ -20,10 +20,11 @@
     background-size: contain;
   }
   &__mobile[data-icon="open"] {
-    background-image: url(../images/hamburger.svg);
+    background-image: url(../../../../src/images/hamburger.svg);
+    // background-image: url(../../../images/hamburger.svg);
   }
   &__mobile[data-icon="close"] {
     z-index: 9999;
-    background-image: url(../images/x.svg);
+    background-image: url(../../../../src/images/x.svg);
   }
 }

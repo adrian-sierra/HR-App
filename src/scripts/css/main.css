@@ -78,7 +78,7 @@ a {
   padding: 0.25em;
 }
 .form-input:focus {
-  box-shadow: 0 0 3.5px 1.25px hsl(100, 100%, 40%);
+  box-shadow: 0 0 0 2px hsl(100, 100%, 40%);
 }
 
 .page-header {
@@ -104,11 +104,11 @@ a {
   background-size: contain;
 }
 .page-header__mobile[data-icon=open] {
-  background-image: url(../images/hamburger.svg);
+  background-image: url(../../../../src/images/hamburger.svg);
 }
 .page-header__mobile[data-icon=close] {
   z-index: 9999;
-  background-image: url(../images/x.svg);
+  background-image: url(../../../../src/images/x.svg);
 }
 
 .mobile-links {
@@ -116,6 +116,7 @@ a {
   position: absolute;
   color: hsl(0, 100%, 100%);
   background-color: hsl(204, 2%, 43%);
+  border-left: 5px solid hsl(0, 100%, 100%);
   inset: 0 0 0 20vw;
 }
 .mobile-links__list {
@@ -131,7 +132,7 @@ a {
   color: hsl(0, 100%, 100%);
 }
 .mobile-links__list a:hover {
-  color: hsl(206, 9%, 15%);
+  color: hsl(100, 100%, 40%);
 }
 .mobile-links__list li {
   cursor: pointer;
@@ -486,7 +487,7 @@ body {
 }
 
 .active-page {
-  color: hsl(206, 9%, 15%);
+  color: hsl(100, 100%, 40%);
 }
 
 .error {
