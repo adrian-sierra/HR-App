@@ -81,6 +81,11 @@ a {
   box-shadow: 0 0 0 2px hsl(100, 100%, 40%);
 }
 
+.content-container {
+  display: grid;
+  justify-content: center;
+}
+
 .page-header {
   display: flex;
   justify-content: space-between;
@@ -104,11 +109,11 @@ a {
   background-size: contain;
 }
 .page-header__mobile[data-icon=open] {
-  background-image: url(../../../images/hamburger.svg);
+  background-image: url(../../../../src/images/hamburger.svg);
 }
 .page-header__mobile[data-icon=close] {
   z-index: 9999;
-  background-image: url(../../../images/x.svg);
+  background-image: url(../../../../src/images/x.svg);
 }
 
 .mobile-links {
@@ -118,6 +123,8 @@ a {
   background-color: hsl(204, 2%, 43%);
   border-left: 5px solid hsl(0, 100%, 100%);
   inset: 0 0 0 20vw;
+  display: grid;
+  align-items: center;
 }
 .mobile-links__list {
   font-size: 0.975rem;
@@ -125,7 +132,6 @@ a {
   list-style: none;
   display: grid;
   gap: 2rem;
-  margin-top: 50%;
   margin-left: 3rem;
 }
 .mobile-links__list a {
@@ -140,11 +146,6 @@ a {
 
 table {
   text-align: center;
-  margin: 0 auto;
-}
-
-th {
-  font-weight: 600;
 }
 
 table,
@@ -243,6 +244,8 @@ body {
 .dashboard {
   color: hsl(0, 100%, 100%);
   text-align: center;
+  display: grid;
+  place-content: center;
 }
 .dashboard__message {
   margin-top: 10vh;
@@ -252,7 +255,6 @@ body {
   display: grid;
   gap: 1rem;
   width: 200px;
-  margin: 0 auto;
   margin-top: 3.5rem;
 }
 .dashboard__punch .date-time {
@@ -261,6 +263,7 @@ body {
   border-radius: 0.675rem;
   background-color: hsl(204, 2%, 43%);
   padding: 1.125rem;
+  background-color: hsla(204, 2%, 43%, 0.275);
 }
 .dashboard__punch .date-time .time-block {
   margin-bottom: 0.375rem;
@@ -268,9 +271,18 @@ body {
   font-weight: 600;
   color: hsl(120, 60%, 60%);
 }
+.dashboard__punch .punch-buttons {
+  display: grid;
+  gap: 0.75rem;
+}
+.dashboard__punch .punch-buttons .punch-buttons-row {
+  display: grid;
+  gap: 0.75rem;
+}
 
 .account-info {
   font-size: 0.875rem;
+  margin: 0 auto;
 }
 .account-info__main {
   margin-top: 5vh;
@@ -286,6 +298,9 @@ body {
   align-items: center;
   width: 62.5%;
   margin: 0 auto;
+}
+.account-info__main .main-links .card-item {
+  border: 2.5px solid hsl(206, 9%, 15%);
 }
 .account-info__main .sub-cards {
   color: hsl(0, 100%, 100%);
@@ -307,11 +322,21 @@ body {
   padding: 7.5px;
 }
 .account-info__main .sub-cards .card .sub-card {
-  margin-top: 0.75rem;
+  margin-top: 1rem;
 }
 .account-info__main .sub-cards .card .sub-card .position-responsibilities,
 .account-info__main .sub-cards .card .sub-card .department-list {
   list-style-position: inside;
+}
+.account-info__main .sub-cards .card .sub-card__table {
+  width: 100%;
+}
+.account-info__main .sub-cards .card .sub-card__table .sub-card__table-header {
+  text-decoration: underline;
+}
+.account-info__main .sub-cards .card .sub-card__table .sub-card__table-header,
+.account-info__main .sub-cards .card .sub-card__table .sub-card__table-data {
+  padding: 5px;
 }
 
 .check {
@@ -348,6 +373,15 @@ body {
 }
 .check__current .current-container .check-result .check-calculation {
   color: hsl(100, 100%, 40%);
+}
+.check .check-table {
+  width: 100%;
+}
+.check .check-table__header {
+  text-decoration: underline;
+}
+.check .check-table__header, .check .check-table__data {
+  padding: 10px 0;
 }
 
 .timesheet {
@@ -473,6 +507,7 @@ body {
   opacity: 0.675;
 }
 
+.mobile-hide,
 .hide {
   display: none;
 }
@@ -492,4 +527,152 @@ body {
 
 .error {
   box-shadow: 0 0 3.5px 1.25px red;
+}
+
+@media (min-width: 750px) {
+  .page-header__logo {
+    width: 60px;
+  }
+  .page-header__title {
+    font-size: 3rem;
+  }
+  .page-header__mobile {
+    width: 60px;
+    height: 60px;
+  }
+  .dashboard-title {
+    font-size: 1.75rem;
+  }
+  .dashboard-btn {
+    font-size: 1.25rem;
+  }
+  .mobile-links__list {
+    font-size: 1.125rem;
+  }
+  .dashboard__message {
+    font-size: 2.125rem;
+  }
+  .dashboard__punch {
+    width: calc(300px + 1.25rem);
+  }
+  .dashboard__punch #time,
+  .dashboard__punch #date {
+    font-size: 1.5rem;
+  }
+  .dashboard__punch .punch-buttons {
+    margin-top: 1.5rem;
+    gap: 1.25rem;
+  }
+  .dashboard__punch .punch-buttons .punch-buttons-row {
+    grid-auto-flow: column;
+  }
+  .dashboard__punch .punch-buttons .punch-buttons-row button {
+    width: 150px;
+  }
+  .account-info {
+    width: 675px;
+  }
+  .account-info .list-item {
+    font-size: 1.25rem;
+  }
+  .account-info .main-links {
+    grid-auto-flow: column;
+    width: 100%;
+  }
+  .account-info .main-links .list-item {
+    padding: 1.125rem 0;
+  }
+  .account-info .sub-cards {
+    font-size: 1.125rem;
+  }
+  .account-info .sub-cards .sub-card {
+    margin-top: 3rem;
+  }
+  .account-info .sub-cards .sub-card__table .sub-card__table-header,
+  .account-info .sub-cards .sub-card__table .sub-card__table-data {
+    padding: 10px;
+  }
+  .check {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1100px) {
+  .page-header__logo {
+    width: 70px;
+  }
+  .page-header__title {
+    font-size: 3.5rem;
+  }
+  .dashboard-title {
+    font-size: 2rem;
+  }
+  .dashboard-btn {
+    font-size: 1.375rem;
+  }
+  .mobile-links__list {
+    font-size: 1.5rem;
+  }
+  .dashboard__message {
+    font-size: 2.5rem;
+  }
+  .dashboard__punch {
+    width: calc(400px + 1.75rem);
+  }
+  .dashboard__punch #time,
+  .dashboard__punch #date {
+    font-size: 1.75rem;
+  }
+  .dashboard__punch .punch-buttons {
+    margin-top: 1.5rem;
+    gap: 1.75rem;
+  }
+  .dashboard__punch .punch-buttons .punch-buttons-row button {
+    width: 200px;
+  }
+  .account-info {
+    width: 800px;
+  }
+  .account-info .list-item {
+    font-size: 1.5rem;
+  }
+  .account-info .main-links .list-item {
+    padding: 1.2rem 0;
+  }
+  .account-info .sub-cards {
+    font-size: 1.25rem;
+  }
+  .account-info .sub-cards .sub-card {
+    margin-top: 5rem;
+  }
+  .account-info .sub-cards .sub-card__table .sub-card__table-header,
+  .account-info .sub-cards .sub-card__table .sub-card__table-data {
+    padding: 12.5px;
+  }
+  .check {
+    font-size: 1.75rem;
+  }
+  .mobile-hide {
+    display: block;
+  }
+  .page-header__mobile {
+    pointer-events: none;
+  }
+  .page-header__mobile[data-icon=open],
+  .page-header__mobile[data-icon=close] {
+    opacity: 0;
+    cursor: default;
+  }
+  .mobile-links {
+    border: none;
+    background-color: transparent;
+  }
+  .mobile-links__list {
+    position: absolute;
+    display: flex;
+    gap: 0.575rem;
+    right: 1.5rem;
+    top: 3rem;
+    font-size: 0.875rem;
+    margin: 0;
+  }
 }/*# sourceMappingURL=main.css.map */

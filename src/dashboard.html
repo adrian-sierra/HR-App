@@ -21,17 +21,18 @@
       />
       <a href="dashboard.html"><h1 class="page-header__title">Tempus</h1></a>
       <a id="nav-icon" class="page-header__mobile" data-icon="open"></a>
-      <div id="links-element" class="mobile-links hide">
+      <div id="links-element" class="mobile-links mobile-hide">
         <ul class="mobile-links__list">
           <a href="dashboard.html"><li class="active-page">Home</li></a>
-          <a href="account-info.html"><li>Account Info</li></a>
-          <a href="check-calculator.html"><li>Paycheck Calculator</li></a>
+          <a href="account-info.html"><li>Account</li></a>
+          <a href="check-calculator.html"><li>Calculator</li></a>
           <a href="timesheet.html"><li>Timesheet</li></a>
-          <a href="add-punch.html"><li>Manual Punch</li></a>
+          <a href="add-punch.html"><li>Punch</li></a>
           <a href="index.html"><li>Log Out</li></a>
         </ul>
       </div>
     </header>
+
     <div class="dashboard">
       <h2 class="dashboard__message">Welcome!</h2>
       <div class="dashboard__punch">
@@ -39,10 +40,16 @@
           <div id="time" class="date-time__block time-block"></div>
           <div id="date" class="date-time__block date-block"></div>
         </div>
-        <button id="clock-in" class="dashboard-btn">Clock In</button>
-        <button id="clock-out" class="dashboard-btn">Clock Out</button>
-        <button id="start-lunch" class="dashboard-btn">Start Lunch</button>
-        <button id="end-lunch" class="dashboard-btn">End Lunch</button>
+        <div class="punch-buttons">
+          <div class="punch-buttons-row punch-buttons-top">
+            <button id="clock-in" class="dashboard-btn">Clock In</button>
+            <button id="clock-out" class="dashboard-btn">Clock Out</button>
+          </div>
+          <div class="punch-buttons-row punch-buttons-bottom">
+            <button id="start-lunch" class="dashboard-btn">Start Lunch</button>
+            <button id="end-lunch" class="dashboard-btn">End Lunch</button>
+          </div>
+        </div>
       </div>
     </div>
   </body>

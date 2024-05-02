@@ -5,6 +5,8 @@
   background-color: $colorSecondaryContent;
   border-left: 5px solid $colorPrimaryContent;
   inset: 0 0 0 20vw;
+  display: grid;
+  align-items: center;
 
   &__list {
     a {
@@ -21,7 +23,6 @@
     text-transform: uppercase;
     list-style: none;
     @include gridGap(2rem);
-    margin-top: 50%;
     margin-left: 3rem;
   }
 }

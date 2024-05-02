@@ -35,4 +35,15 @@
       }
     }
   }
+  .check-table {
+    width: 100%;
+    &__header {
+      text-decoration: underline;
+    }
+
+    &__header,
+    &__data {
+      padding: 10px 0;
+    }
+  }
 }

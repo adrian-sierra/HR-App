@@ -24,70 +24,72 @@
         style="pointer-events: none"
       ></a>
     </header>
-    <div class="create">
-      <form id="create-form" class="create__form" action="#">
-        <div class="create-input">
-          <div class="create-input__groups">
-            <label for="company">Company</label>
-            <input
-              class="create-input__input form-input"
-              type="text"
-              id="company"
-              name="company"
-              required
-            />
-          </div>
-          <div class="create-input__names">
+    <div class="content-container">
+      <div class="create">
+        <form id="create-form" class="create__form" action="#">
+          <div class="create-input">
             <div class="create-input__groups">
-              <label for="first-name">First Name</label>
+              <label for="company">Company</label>
               <input
-                type="text"
                 class="create-input__input form-input"
-                name="first-name"
-                id="create-first-name"
+                type="text"
+                id="company"
+                name="company"
                 required
               />
             </div>
+            <div class="create-input__names">
+              <div class="create-input__groups">
+                <label for="first-name">First Name</label>
+                <input
+                  type="text"
+                  class="create-input__input form-input"
+                  name="first-name"
+                  id="create-first-name"
+                  required
+                />
+              </div>
+              <div class="create-input__groups">
+                <label for="last-name">Last Name</label>
+                <input
+                  type="text"
+                  class="create-input__input form-input"
+                  name="last-name"
+                  id="create-last-name"
+                  required
+                />
+              </div>
+            </div>
             <div class="create-input__groups">
-              <label for="last-name">Last Name</label>
+              <label for="email">Email</label>
               <input
-                type="text"
+                type="email"
                 class="create-input__input form-input"
-                name="last-name"
-                id="create-last-name"
+                id="create-email"
+                name="email"
+                required
+              />
+            </div>
+
+            <div class="create-input__groups">
+              <label for="password">Password</label>
+              <input
+                class="create-input__input form-input"
+                type="password"
+                id="password"
+                name="password"
                 required
               />
             </div>
           </div>
-          <div class="create-input__groups">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              class="create-input__input form-input"
-              id="create-email"
-              name="email"
-              required
-            />
-          </div>
 
-          <div class="create-input__groups">
-            <label for="password">Password</label>
-            <input
-              class="create-input__input form-input"
-              type="password"
-              id="password"
-              name="password"
-              required
-            />
-          </div>
-        </div>
-
-        <!-- <button class="submit-btn btn" id="submit-btn" type="submit">
+          <!-- <button class="submit-btn btn" id="submit-btn" type="submit">
           Sign Up
         </button> -->
-      </form>
-      <a class="create__button sign-up btn" href="dashboard.html">Sign Up</a>
-      <a class="create__button sign-in btn" href="index.html">Sign In</a>
+        </form>
+        <a class="create__button sign-up btn" href="dashboard.html">Sign Up</a>
+        <a class="create__button sign-in btn" href="index.html">Sign In</a>
+      </div>
     </div>
     <!-- Thank you display -->
     <div class="thanks hide">

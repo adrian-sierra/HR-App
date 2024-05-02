@@ -5,9 +5,11 @@ nav_icon.addEventListener("click", () => {
   if (nav_icon.dataset.icon === "open") {
     nav_icon.dataset.icon = "close";
     links_element.classList.remove("hide");
+    links_element.classList.remove("mobile-hide");
   } else {
     nav_icon.dataset.icon = "open";
     links_element.classList.add("hide");
+    links_element.classList.add("mobile-hide");
   }
 });
 function resetPrevious(tab, card) {

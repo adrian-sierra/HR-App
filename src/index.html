@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tempus</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,48 +28,50 @@
         style="pointer-events: none"
       ></a>
     </header>
-    <div class="index">
-      <form id="login-form" class="index__form" action="#">
-        <div class="index-input">
-          <div class="index-input__groups">
-            <label for="company">Company</label>
-            <input
-              class="index-input__input form-input"
-              type="text"
-              id="login-company"
-              name="company"
-            />
+    <div class="content-container">
+      <div class="index">
+        <form id="login-form" class="index__form" action="#">
+          <div class="index-input">
+            <div class="index-input__groups">
+              <label for="company">Company</label>
+              <input
+                class="index-input__input form-input"
+                type="text"
+                id="login-company"
+                name="company"
+              />
+            </div>
+            <div class="index-input__groups">
+              <label for="username">Email</label>
+              <input
+                class="index-input__input form-input"
+                type="email"
+                id="login-email"
+                name="email"
+                required
+              />
+            </div>
+            <div class="index-input__groups">
+              <label for="password">Password</label>
+              <input
+                class="index-input__input form-input"
+                type="password"
+                id="login-password"
+                name="password"
+                required
+              />
+            </div>
           </div>
-          <div class="index-input__groups">
-            <label for="username">Email</label>
-            <input
-              class="index-input__input form-input"
-              type="email"
-              id="login-email"
-              name="email"
-              required
-            />
-          </div>
-          <div class="index-input__groups">
-            <label for="password">Password</label>
-            <input
-              class="index-input__input form-input"
-              type="password"
-              id="login-password"
-              name="password"
-              required
-            />
-          </div>
-        </div>
-        <a class="index__button btn" href="dashboard.html">Log In</a>
-        <!-- <button class="submit-btn btn" id="submit-btn" type="submit">
+          <a class="index__button btn" href="dashboard.html">Log In</a>
+          <!-- <button class="submit-btn btn" id="submit-btn" type="submit">
           Log In
         </button> -->
-      </form>
-      <!-- <div class="index__help"> -->
-      <p class="index__help">New User? <a href="create.html">Register</a></p>
-      <!-- <p class="login-forgot"><a href="#">Forgot Password?</a></p> -->
-      <!-- </div> -->
+        </form>
+        <!-- <div class="index__help"> -->
+        <p class="index__help">New User? <a href="create.html">Register</a></p>
+        <!-- <p class="login-forgot"><a href="#">Forgot Password?</a></p> -->
+        <!-- </div> -->
+      </div>
     </div>
   </body>
 </html>

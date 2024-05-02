@@ -1,6 +1,8 @@
 .dashboard {
   color: $colorPrimaryContent;
   text-align: center;
+  display: grid;
+  place-content: center;
 
   &__message {
     margin-top: 10vh;
@@ -8,18 +10,26 @@
   }
   &__punch {
     @include gridGap(1rem);
+
     width: 200px;
-    margin: 0 auto;
+
     margin-top: 3.5rem;
 
     .date-time {
       margin-bottom: 2rem;
       @include contentContainer(1.125rem);
+      background-color: hsla(204, 2%, 43%, 0.275);
       .time-block {
         margin-bottom: 0.375rem;
         font-size: 1.325rem;
         font-weight: $fwBold;
         color: $colorAccent;
+      }
+    }
+    .punch-buttons {
+      @include gridGap(0.75rem);
+      .punch-buttons-row {
+        @include gridGap(0.75rem);
       }
     }
   }
