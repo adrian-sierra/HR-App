@@ -38,6 +38,7 @@
         border-radius: $borderRadius;
         position: relative;
         // width: min(50%, 100px);
+        width: 60px;
         padding: 0.5rem 0.15rem;
         &::before {
           content: "";
