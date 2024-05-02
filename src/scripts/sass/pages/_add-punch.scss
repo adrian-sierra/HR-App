@@ -5,7 +5,7 @@
   padding-bottom: 3rem;
   display: grid;
   gap: 2.5rem;
-  max-width: 500px;
+
   margin: 0 auto;
   &__auto {
     @include gridGap(1rem);

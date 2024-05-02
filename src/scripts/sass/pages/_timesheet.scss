@@ -37,7 +37,7 @@
         text-align: left;
         border-radius: $borderRadius;
         position: relative;
-        width: min(50%, 100px);
+        // width: min(50%, 100px);
         padding: 0.5rem 0.15rem;
         &::before {
           content: "";

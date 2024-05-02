@@ -1,5 +1,6 @@
 @media (min-width: 750px) {
   .page-header {
+    margin-bottom: 2.5rem;
     &__logo {
       width: 60px;
     }
@@ -77,11 +78,50 @@
 
   .check {
     font-size: 1.25rem;
+    width: 675px;
+    .check-table {
+      font-size: 1.25rem;
+      &__header,
+      &__data {
+        padding: 11.25px 2.75px;
+      }
+    }
+  }
+  .timesheet {
+    width: 675px;
+    &__entry {
+      font-size: 1.125rem;
+      .entry-times-container {
+        .entry-data {
+          width: 100px;
+          &::before {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .add {
+    width: 675px;
+    .entry {
+      font-size: 1.125rem;
+      gap: 0.75rem;
+      &__group {
+        gap: 0.5rem;
+      }
+      &__button {
+        margin-top: 1rem;
+      }
+    }
+  }
+  .entry__edit {
+    width: 75px;
   }
 }
 
 @media (min-width: 1100px) {
   .page-header {
+    margin-bottom: 5rem;
     &__logo {
       width: 70px;
     }
@@ -146,7 +186,45 @@
     }
   }
   .check {
-    font-size: 1.75rem;
+    font-size: 1.675rem;
+    width: 800px;
+    .check-table {
+      font-size: 1.5rem;
+      &__header,
+      &__data {
+        padding: 12.5px 5px;
+      }
+    }
+  }
+  .timesheet {
+    width: 800px;
+    &__entry {
+      font-size: 1.475rem;
+      .entry-times-container {
+        .entry-data {
+          width: 125px;
+          &::before {
+            font-size: 1.125rem;
+          }
+        }
+      }
+    }
+  }
+  .add {
+    width: 800px;
+    .entry {
+      font-size: 1.5rem;
+      gap: 1rem;
+      &__group {
+        gap: 0.75rem;
+      }
+      &__button {
+        margin-top: 1.25rem;
+      }
+    }
+  }
+  .entry__edit {
+    width: 85px;
   }
   // FOR NAV BAR
   .mobile-hide {
@@ -171,7 +249,7 @@
       gap: 0.575rem;
       right: 1.5rem;
       top: calc(1.5rem + 1.5rem);
-      font-size: 0.875rem;
+      font-size: 0.9125rem;
       margin: 0;
     }
   }

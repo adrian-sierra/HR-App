@@ -109,11 +109,11 @@ a {
   background-size: contain;
 }
 .page-header__mobile[data-icon=open] {
-  background-image: url(../../../../src/images/hamburger.svg);
+  background-image: url(../../../images/hamburger.svg);
 }
 .page-header__mobile[data-icon=close] {
   z-index: 9999;
-  background-image: url(../../../../src/images/x.svg);
+  background-image: url(../../../images/x.svg);
 }
 
 .mobile-links {
@@ -342,6 +342,7 @@ body {
 .check {
   color: hsl(0, 100%, 100%);
   font-size: 0.875rem;
+  margin: 0 auto;
 }
 .check__current {
   margin-bottom: 5rem;
@@ -430,7 +431,6 @@ body {
   text-align: left;
   border-radius: 0.675rem;
   position: relative;
-  width: min(50%, 100px);
   padding: 0.5rem 0.15rem;
 }
 .timesheet__entry .entry-times-container .entry-data::before {
@@ -470,7 +470,6 @@ body {
   padding-bottom: 3rem;
   display: grid;
   gap: 2.5rem;
-  max-width: 500px;
   margin: 0 auto;
 }
 .add__auto {
@@ -530,6 +529,9 @@ body {
 }
 
 @media (min-width: 750px) {
+  .page-header {
+    margin-bottom: 2.5rem;
+  }
   .page-header__logo {
     width: 60px;
   }
@@ -594,9 +596,47 @@ body {
   }
   .check {
     font-size: 1.25rem;
+    width: 675px;
+  }
+  .check .check-table {
+    font-size: 1.25rem;
+  }
+  .check .check-table__header, .check .check-table__data {
+    padding: 11.25px 2.75px;
+  }
+  .timesheet {
+    width: 675px;
+  }
+  .timesheet__entry {
+    font-size: 1.125rem;
+  }
+  .timesheet__entry .entry-times-container .entry-data {
+    width: 100px;
+  }
+  .timesheet__entry .entry-times-container .entry-data::before {
+    font-size: 1rem;
+  }
+  .add {
+    width: 675px;
+  }
+  .add .entry {
+    font-size: 1.125rem;
+    gap: 0.75rem;
+  }
+  .add .entry__group {
+    gap: 0.5rem;
+  }
+  .add .entry__button {
+    margin-top: 1rem;
+  }
+  .entry__edit {
+    width: 75px;
   }
 }
 @media (min-width: 1100px) {
+  .page-header {
+    margin-bottom: 5rem;
+  }
   .page-header__logo {
     width: 70px;
   }
@@ -649,7 +689,42 @@ body {
     padding: 12.5px;
   }
   .check {
-    font-size: 1.75rem;
+    font-size: 1.675rem;
+    width: 800px;
+  }
+  .check .check-table {
+    font-size: 1.5rem;
+  }
+  .check .check-table__header, .check .check-table__data {
+    padding: 12.5px 5px;
+  }
+  .timesheet {
+    width: 800px;
+  }
+  .timesheet__entry {
+    font-size: 1.475rem;
+  }
+  .timesheet__entry .entry-times-container .entry-data {
+    width: 125px;
+  }
+  .timesheet__entry .entry-times-container .entry-data::before {
+    font-size: 1.125rem;
+  }
+  .add {
+    width: 800px;
+  }
+  .add .entry {
+    font-size: 1.5rem;
+    gap: 1rem;
+  }
+  .add .entry__group {
+    gap: 0.75rem;
+  }
+  .add .entry__button {
+    margin-top: 1.25rem;
+  }
+  .entry__edit {
+    width: 85px;
   }
   .mobile-hide {
     display: block;
@@ -672,7 +747,7 @@ body {
     gap: 0.575rem;
     right: 1.5rem;
     top: 3rem;
-    font-size: 0.875rem;
+    font-size: 0.9125rem;
     margin: 0;
   }
 }/*# sourceMappingURL=main.css.map */
