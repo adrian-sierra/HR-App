@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="scripts/css/main.css" />
+    <link rel="shortcut icon" href="./images/clock.ico" type="image/x-icon" />
     <script src="js/Timesheet.js" defer></script>
   </head>
 
@@ -21,7 +22,7 @@
       />
       <a href="dashboard.html"><h1 class="page-header__title">Tempus</h1></a>
       <a id="nav-icon" class="page-header__mobile" data-icon="open"></a>
-      <div id="links-element" class="mobile-links mobile-hide">
+      <div id="links-element" class="mobile-links">
         <ul class="mobile-links__list">
           <a href="dashboard.html"><li>Home</li></a>
           <a href="account-info.html"><li>Account</li></a>
@@ -33,57 +34,59 @@
       </div>
     </header>
     <main>
-      <div class="timesheet" data-empty="false">
+      <div class="timesheet container-main" data-empty="false">
         <h1 class="timesheet__week dashboard-title">
           Week of <span id="entry-week"></span>
         </h1>
-        <div class="timesheet__entry">
-          <h3 class="entry-date">1/4/2024</h3>
-          <div class="divider"></div>
-          <div class="entry-times">
-            <div class="entry-clock entry-times-container">
-              <p class="entry-clock-in entry-data">10:05am</p>
-              <p class="entry-clock-out entry-data">2:30pm</p>
+        <div class="time-entry">
+          <div class="timesheet__entry">
+            <h3 class="entry-date">1/4/2024</h3>
+            <div class="divider"></div>
+            <div class="entry-times">
+              <div class="entry-clock entry-times-container">
+                <p class="entry-clock-in entry-data">10:05am</p>
+                <p class="entry-clock-out entry-data">2:30pm</p>
+              </div>
+              <div class="entry-lunch entry-times-container" data-lunch="false">
+                <p class="entry-lunch-in entry-data">12:00pm</p>
+                <p class="entry-lunch-out entry-data">12:30pm</p>
+              </div>
             </div>
-            <div class="entry-lunch entry-times-container" data-lunch="false">
-              <p class="entry-lunch-in entry-data">12:00pm</p>
-              <p class="entry-lunch-out entry-data">12:30pm</p>
-            </div>
+            <div class="divider"></div>
+            <p class="entry-total">4.5 Hours</p>
           </div>
-          <div class="divider"></div>
-          <p class="entry-total">4.5 Hours</p>
-        </div>
-        <div class="timesheet__entry">
-          <h3 class="entry-date">1/5/2024</h3>
-          <div class="divider"></div>
-          <div class="entry-times">
-            <div class="entry-clock entry-times-container">
-              <p class="entry-clock-in entry-data">10:05am</p>
-              <p class="entry-clock-out entry-data">2:30pm</p>
+          <div class="timesheet__entry">
+            <h3 class="entry-date">1/5/2024</h3>
+            <div class="divider"></div>
+            <div class="entry-times">
+              <div class="entry-clock entry-times-container">
+                <p class="entry-clock-in entry-data">10:05am</p>
+                <p class="entry-clock-out entry-data">2:30pm</p>
+              </div>
+              <div class="entry-lunch entry-times-container" data-lunch="false">
+                <p class="entry-lunch-in entry-data">12:00pm</p>
+                <p class="entry-lunch-out entry-data">12:30pm</p>
+              </div>
             </div>
-            <div class="entry-lunch entry-times-container" data-lunch="false">
-              <p class="entry-lunch-in entry-data">12:00pm</p>
-              <p class="entry-lunch-out entry-data">12:30pm</p>
-            </div>
+            <div class="divider"></div>
+            <p class="entry-total">4.5 Hours</p>
           </div>
-          <div class="divider"></div>
-          <p class="entry-total">4.5 Hours</p>
-        </div>
-        <div class="timesheet__entry">
-          <h3 class="entry-date">1/6/2024</h3>
-          <div class="divider"></div>
-          <div class="entry-times">
-            <div class="entry-clock entry-times-container">
-              <p class="entry-clock-in entry-data">10:05am</p>
-              <p class="entry-clock-out entry-data">2:30pm</p>
+          <div class="timesheet__entry">
+            <h3 class="entry-date">1/6/2024</h3>
+            <div class="divider"></div>
+            <div class="entry-times">
+              <div class="entry-clock entry-times-container">
+                <p class="entry-clock-in entry-data">10:05am</p>
+                <p class="entry-clock-out entry-data">2:30pm</p>
+              </div>
+              <div class="entry-lunch entry-times-container" data-lunch="false">
+                <p class="entry-lunch-in entry-data">12:00pm</p>
+                <p class="entry-lunch-out entry-data">12:30pm</p>
+              </div>
             </div>
-            <div class="entry-lunch entry-times-container" data-lunch="false">
-              <p class="entry-lunch-in entry-data">12:00pm</p>
-              <p class="entry-lunch-out entry-data">12:30pm</p>
-            </div>
+            <div class="divider"></div>
+            <p class="entry-total">4.5 Hours</p>
           </div>
-          <div class="divider"></div>
-          <p class="entry-total">4.5 Hours</p>
         </div>
       </div>
     </main>

@@ -9,10 +9,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="scripts/css/main.css" />
+    <link rel="shortcut icon" href="./images/clock.ico" type="image/x-icon" />
     <script src="js/Dashboard.js" defer></script>
   </head>
 
-  <body class="dashboard-body">
+  <!-- <body class="dashboard-body"> -->
+  <body>
     <header class="page-header">
       <img
         class="page-header__logo"
@@ -21,7 +23,7 @@
       />
       <a href="dashboard.html"><h1 class="page-header__title">Tempus</h1></a>
       <a id="nav-icon" class="page-header__mobile" data-icon="open"></a>
-      <div id="links-element" class="mobile-links mobile-hide">
+      <div id="links-element" class="mobile-links">
         <ul class="mobile-links__list">
           <a href="dashboard.html"><li class="active-page">Home</li></a>
           <a href="account-info.html"><li>Account</li></a>
@@ -32,22 +34,25 @@
         </ul>
       </div>
     </header>
-
-    <div class="dashboard">
-      <h2 class="dashboard__message">Welcome!</h2>
-      <div class="dashboard__punch">
-        <div class="date-time">
-          <div id="time" class="date-time__block time-block"></div>
-          <div id="date" class="date-time__block date-block"></div>
-        </div>
-        <div class="punch-buttons">
-          <div class="punch-buttons-row punch-buttons-top">
-            <button id="clock-in" class="dashboard-btn">Clock In</button>
-            <button id="clock-out" class="dashboard-btn">Clock Out</button>
+    <div class="dashboard-container">
+      <div class="dashboard main-container">
+        <h2 class="dashboard__message">Welcome!</h2>
+        <div class="dashboard__punch">
+          <div class="date-time">
+            <div id="time" class="date-time__block time-block"></div>
+            <div id="date" class="date-time__block date-block"></div>
           </div>
-          <div class="punch-buttons-row punch-buttons-bottom">
-            <button id="start-lunch" class="dashboard-btn">Start Lunch</button>
-            <button id="end-lunch" class="dashboard-btn">End Lunch</button>
+          <div class="punch-buttons">
+            <div class="punch-buttons-row punch-buttons-top">
+              <button id="clock-in" class="dashboard-btn">Clock In</button>
+              <button id="clock-out" class="dashboard-btn">Clock Out</button>
+            </div>
+            <div class="punch-buttons-row punch-buttons-bottom">
+              <button id="start-lunch" class="dashboard-btn">
+                Start Lunch
+              </button>
+              <button id="end-lunch" class="dashboard-btn">End Lunch</button>
+            </div>
           </div>
         </div>
       </div>

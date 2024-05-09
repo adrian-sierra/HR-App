@@ -1,6 +1,5 @@
 .timesheet {
   color: $colorPrimaryContent;
-  margin: 0 auto;
   display: grid;
   gap: 1rem;
   &__entry {
@@ -34,17 +33,19 @@
       .entry-data {
         color: $colorBackground;
         background-color: $colorPrimaryContent;
-        text-align: left;
+        text-align: center;
+
         border-radius: $borderRadius;
         position: relative;
-        // width: min(50%, 100px);
         width: 60px;
-        padding: 0.5rem 0.15rem;
+
+        padding: 0.5em 0.15em;
         &::before {
           content: "";
+          text-transform: uppercase;
           position: absolute;
           top: -52.5%;
-          left: 0;
+          left: 0.15rem;
           font-size: 0.675rem;
           color: $colorPrimaryContent;
         }

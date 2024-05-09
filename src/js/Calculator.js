@@ -2,22 +2,22 @@ const nav_icon = document.getElementById("nav-icon");
 const links_element = document.getElementById("links-element");
 const calc_button = document.getElementById("calculation-button");
 
+// FOR MOBILE NAV
 nav_icon.addEventListener("click", () => {
   if (nav_icon.dataset.icon === "open") {
     nav_icon.dataset.icon = "close";
-    links_element.classList.remove("hide");
-    links_element.classList.remove("mobile-hide");
+    links_element.style.display = "grid";
   } else {
     nav_icon.dataset.icon = "open";
-    links_element.classList.add("hide");
-    links_element.classList.add("mobile-hide");
+    links_element.style.display = "none";
   }
 });
 
 function checkEmptyFields(inputs) {
   let error = false;
+
   for (let i = 0; i < inputs.length; i++) {
-    if (inputs[i].value == "") {
+    if (inputs[i].value == "" && i != 1) {
       inputs[i].classList.add("error");
       error = true;
     } else {
@@ -40,7 +40,7 @@ function displayCheck(regular, OT, rate) {
     regular += OT * 1.5;
     gross_total += regular * rate;
   } else {
-    gross_total += regularHours * rate;
+    gross_total += regular * rate;
   }
   net_total = (gross_total * 0.72).toFixed(2);
   gross_total = gross_total.toFixed(2);
@@ -53,6 +53,7 @@ const net_result = document.getElementById("net-number");
 function calcProcess() {
   clearPreviousAnswers();
   const check_inputs = document.querySelectorAll(".form-input");
+  // console.log(check_inputs);
   if (!checkEmptyFields(check_inputs)) {
     displayCheck(
       parseFloat(check_inputs[0].value),

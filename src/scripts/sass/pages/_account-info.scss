@@ -1,15 +1,15 @@
 .account-info {
   font-size: $fsText;
-  margin: 0 auto;
+  // margin: 0 auto;
   &__main {
-    margin-top: 5vh;
-    padding: 1rem;
     @include contentContainer(1rem);
+    background-color: transparent;
 
     .main-links {
+      text-transform: uppercase;
       @include gridGap(0.5rem);
       align-items: center;
-      width: 62.5%;
+      width: 72.5%;
       margin: 0 auto;
       .card-item {
         border: 2.5px solid $colorBackground;
@@ -17,9 +17,13 @@
     }
     .sub-cards {
       color: $colorPrimaryContent;
+      .line {
+        border: 2px solid $colorPrimaryContent;
+        margin: 1.5rem 0;
+      }
       .card {
-        margin-top: 1rem;
-        @include contentContainer(1rem, $colorBackground);
+        // margin-top: 1rem;
+        @include contentContainer(1rem, $colorSecondaryContent);
 
         .sub-links {
           @include gridGap(0.25rem);
@@ -36,6 +40,11 @@
           .department-list {
             list-style-position: inside;
           }
+          h2 {
+            text-transform: uppercase;
+            text-decoration: underline;
+          }
+
           &__table {
             width: 100%;
             .sub-card__table-header {

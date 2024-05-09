@@ -1,28 +1,16 @@
 .mobile-links {
-  z-index: 999;
   position: absolute;
-  color: $colorPrimaryContent;
-  background-color: $colorSecondaryContent;
-  border-left: 5px solid $colorPrimaryContent;
-  inset: 0 0 0 20vw;
-  display: grid;
-  align-items: center;
-
+  right: 2.5rem;
   &__list {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
     a {
+      font-size: 1.125rem;
       color: $colorPrimaryContent;
       &:hover {
-        // color: $colorBackground;
         color: $colorOutline;
       }
     }
-    li {
-      cursor: pointer;
-    }
-    font-size: 0.975rem;
-    text-transform: uppercase;
-    list-style: none;
-    @include gridGap(2rem);
-    margin-left: 3rem;
   }
 }

@@ -1,12 +1,18 @@
 .add {
-  // text-align: center;
   color: $colorPrimaryContent;
   font-size: 0.875rem;
   padding-bottom: 3rem;
   display: grid;
   gap: 2.5rem;
 
-  margin: 0 auto;
+  .manual {
+    margin-bottom: 2.5rem;
+
+    &__entry {
+      max-width: 500px;
+    }
+  }
+
   &__auto {
     @include gridGap(1rem);
   }
@@ -20,13 +26,11 @@
       gap: 0.25rem;
     }
     &__button {
+      margin: 0 auto;
       margin-top: 0.5rem;
+      width: 250px;
     }
   }
-  // &__button {
-  //   width: 50%;
-  //   margin: 0 auto;
-  // }
 }
 .entry__edit {
   cursor: pointer;

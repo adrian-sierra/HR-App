@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="scripts/css/main.css" />
+    <link rel="shortcut icon" href="./images/clock.ico" type="image/x-icon" />
     <script src="js/Calculator.js" defer></script>
   </head>
 
@@ -21,7 +22,7 @@
       />
       <a href="dashboard.html"><h1 class="page-header__title">Tempus</h1></a>
       <a id="nav-icon" class="page-header__mobile" data-icon="open"></a>
-      <div id="links-element" class="mobile-links mobile-hide">
+      <div id="links-element" class="mobile-links">
         <ul class="mobile-links__list">
           <a href="dashboard.html"><li>Home</li></a>
           <a href="account-info.html"><li>Account</li></a>
@@ -35,10 +36,10 @@
       </div>
     </header>
     <main>
-      <div class="check">
+      <div class="check container-main">
         <div class="check__current">
           <h1 class="current-title dashboard-title">Calculate Check</h1>
-          <div class="current-container">
+          <div class="current-container container-content">
             <div class="check-form">
               <div class="check-form__group">
                 <label for="hours">Hours</label>
@@ -59,14 +60,14 @@
                 Calculate
               </button>
             </div>
-            <div class="check-result">
-              <div class="check-result__gross">
+            <div class="check-result-group">
+              <div class="check-result__gross check-result">
                 <h2 class="result-title">Gross Pay:</h2>
                 <p class="gross-result check-calculation">
                   <span id="gross-number"></span>
                 </p>
               </div>
-              <div class="check-result__net">
+              <div class="check-result__net check-result">
                 <h2 class="result-title">Net Pay:</h2>
                 <p class="net-result check-calculation">
                   <span id="net-number"></span>
@@ -77,29 +78,31 @@
         </div>
         <div class="check__previous">
           <h1 class="previous-title dashboard-title">Previous Checks</h1>
-          <table class="check-table">
-            <tr class="check-table__row">
-              <th class="check-table__header">Week</th>
-              <th class="check-table__header">Regular Hours</th>
-              <th class="check-table__header">OT Hours</th>
-              <th class="check-table__header">Gross Pay</th>
-              <th class="check-table__header">Net Pay</th>
-            </tr>
-            <tr class="check-table__row">
-              <td class="check-table__data">1/8/2024</td>
-              <td class="check-table__data">40</td>
-              <td class="check-table__data">2.4</td>
-              <td class="check-table__data">1308</td>
-              <td class="check-table__data">915.6</td>
-            </tr>
-            <tr class="check-table__row">
-              <td class="check-table__data">1/15/2024</td>
-              <td class="check-table__data">40</td>
-              <td class="check-table__data">5.6</td>
-              <td class="check-table__data">1452</td>
-              <td class="check-table__data">1016.4</td>
-            </tr>
-          </table>
+          <div class="container-content">
+            <table class="check-table">
+              <tr class="check-table__row">
+                <th class="check-table__header">Week</th>
+                <th class="check-table__header">Regular Hours</th>
+                <th class="check-table__header">OT Hours</th>
+                <th class="check-table__header">Gross Pay</th>
+                <th class="check-table__header">Net Pay</th>
+              </tr>
+              <tr class="check-table__row">
+                <td class="check-table__data">1/8/2024</td>
+                <td class="check-table__data">40</td>
+                <td class="check-table__data">2.4</td>
+                <td class="check-table__data">1308</td>
+                <td class="check-table__data">915.6</td>
+              </tr>
+              <tr class="check-table__row">
+                <td class="check-table__data">1/15/2024</td>
+                <td class="check-table__data">40</td>
+                <td class="check-table__data">5.6</td>
+                <td class="check-table__data">1452</td>
+                <td class="check-table__data">1016.4</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </main>

@@ -1,6 +1,33 @@
+@media (max-height: 350px) {
+  .main-container {
+    padding-bottom: 3rem;
+  }
+  .mobile-links__list {
+    padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .mobile-links {
+    z-index: 1;
+    background-color: $colorSecondaryContent;
+    border-left: 5px solid $colorPrimaryContent;
+    inset: 0 0 0 20vw;
+    display: none;
+    align-items: center;
+    &__list {
+      flex-direction: column;
+      font-size: 0.975rem;
+      text-transform: uppercase;
+      @include gridGap(2rem);
+      margin-left: 3rem;
+    }
+  }
+}
+
 @media (min-width: 750px) {
   .page-header {
-    margin-bottom: 2.5rem;
+    margin-bottom: 7.5rem;
     &__logo {
       width: 60px;
     }
@@ -21,39 +48,51 @@
   .mobile-links__list {
     font-size: 1.125rem;
   }
-  .dashboard {
-    &__message {
-      font-size: 2.125rem;
-    }
-    &__punch {
-      width: calc(150px * 2 + (1.25rem));
-      #time,
-      #date {
-        font-size: 1.5rem;
+  .container-main {
+    margin-inline: 2.5rem;
+  }
+  .time-entry {
+    gap: 1.25rem;
+  }
+
+  .index,
+  .create {
+    font-size: 1.05rem;
+  }
+
+  .dashboard-container {
+    .dashboard {
+      padding: 4rem 6rem;
+      &__message {
+        font-size: 2.125rem;
       }
+      &__punch {
+        #time {
+          font-size: 1.5rem;
+        }
+        #date {
+          font-size: 1.25rem;
+        }
 
-      .punch-buttons {
-        margin-top: 1.5rem;
-        gap: 1.25rem;
+        .punch-buttons {
+          margin-top: 1.5rem;
+          gap: 1.25rem;
 
-        .punch-buttons-row {
-          grid-auto-flow: column;
+          .punch-buttons-row {
+            grid-auto-flow: column;
 
-          button {
-            width: 150px;
+            button {
+              width: 150px;
+            }
           }
         }
       }
     }
   }
-
   .account-info {
     .list-item {
       font-size: 1.25rem;
     }
-
-    width: 675px;
-    // margin: 0 auto;
     .main-links {
       grid-auto-flow: column;
       width: 100%;
@@ -78,7 +117,24 @@
 
   .check {
     font-size: 1.25rem;
-    width: 675px;
+    .current-container {
+      grid-auto-flow: column;
+      grid-template-columns: 1fr 0.575fr;
+      .check-form {
+        &__group {
+          input {
+            width: 200px;
+          }
+        }
+        &__button {
+          margin-top: 2rem;
+          width: 250px;
+        }
+      }
+      .check-result {
+        flex-direction: column;
+      }
+    }
     .check-table {
       font-size: 1.25rem;
       &__header,
@@ -88,7 +144,6 @@
     }
   }
   .timesheet {
-    width: 675px;
     &__entry {
       font-size: 1.125rem;
       .entry-times-container {
@@ -102,15 +157,20 @@
     }
   }
   .add {
-    width: 675px;
+    .manual {
+      margin-bottom: 4.5rem;
+    }
+
     .entry {
       font-size: 1.125rem;
       gap: 0.75rem;
+
       &__group {
         gap: 0.5rem;
       }
       &__button {
         margin-top: 1rem;
+        width: 350px;
       }
     }
   }
@@ -121,7 +181,7 @@
 
 @media (min-width: 1200px) {
   .page-header {
-    margin-bottom: 5rem;
+    margin-bottom: 9.25rem;
     &__logo {
       width: 70px;
     }
@@ -129,106 +189,31 @@
       font-size: 3.5rem;
     }
   }
+  .container-main {
+    margin-inline: 5rem;
+  }
   .dashboard-title {
     font-size: 2rem;
+    margin-bottom: 3.5rem;
   }
-  .dashboard-btn {
-    font-size: 1.375rem;
-  }
+
   .mobile-links__list {
     font-size: 1.5rem;
   }
-  .dashboard {
-    &__message {
-      font-size: 2.5rem;
-    }
-    &__punch {
-      width: calc(200px * 2 + (1.75rem));
-      #time,
-      #date {
-        font-size: 1.75rem;
-      }
 
-      .punch-buttons {
-        margin-top: 1.5rem;
-        gap: 1.75rem;
-
-        .punch-buttons-row {
-          button {
-            width: 200px;
-          }
-        }
-      }
-    }
-  }
-  .account-info {
-    .list-item {
-      font-size: 1.5rem;
-    }
-    width: 800px;
-    .main-links {
-      .list-item {
-        padding: 1.2rem 0;
-      }
-    }
-    .sub-cards {
-      font-size: 1.25rem;
-
-      .sub-card {
-        margin-top: 5rem;
-        &__table {
-          .sub-card__table-header,
-          .sub-card__table-data {
-            padding: 12.5px;
-          }
-        }
-      }
-    }
-  }
-  .check {
-    font-size: 1.675rem;
-    width: 800px;
-    .check-table {
-      font-size: 1.5rem;
-      &__header,
-      &__data {
-        padding: 12.5px 5px;
-      }
-    }
-  }
   .timesheet {
-    width: 800px;
     &__entry {
-      font-size: 1.475rem;
       .entry-times-container {
         .entry-data {
-          width: 135px;
-          &::before {
-            font-size: 1.125rem;
-          }
+          width: 145px;
         }
       }
     }
   }
-  .add {
-    width: 800px;
-    .entry {
-      font-size: 1.5rem;
-      gap: 1rem;
-      &__group {
-        gap: 0.75rem;
-      }
-      &__button {
-        margin-top: 1.25rem;
-      }
-    }
-  }
-  .entry__edit {
-    width: 85px;
-  }
+
   // FOR NAV BAR
-  .mobile-hide {
-    display: block;
+  .mobile-links {
+    display: grid !important;
   }
   .page-header__mobile {
     pointer-events: none;
@@ -237,20 +222,5 @@
   .page-header__mobile[data-icon="close"] {
     opacity: 0;
     cursor: default;
-  }
-
-  .mobile-links {
-    border: none;
-    background-color: transparent;
-
-    &__list {
-      position: absolute;
-      display: flex;
-      gap: 0.575rem;
-      right: 1.5rem;
-      top: calc(1.5rem + 1.5rem);
-      font-size: 0.9125rem;
-      margin: 0;
-    }
   }
 }

@@ -1,14 +1,13 @@
 .check {
   color: $colorPrimaryContent;
   font-size: $fsText;
-  margin: 0 auto;
   &__current {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 
     .current-container {
       display: grid;
-      grid-auto-flow: column;
-      grid-template-columns: 1fr 0.575fr;
+      place-content: center;
+
       .check-form {
         @include gridGap(0.5rem);
 
@@ -18,18 +17,23 @@
           grid-template-columns: 0.425fr 1fr;
 
           input {
-            width: 100px;
+            width: 150px;
           }
         }
         &__button {
-          width: 70%;
+          width: 175px;
           margin-top: 0.5rem;
+          margin-bottom: 1.5rem;
         }
       }
-      .check-result {
+      .check-result-group {
         display: grid;
-        font-weight: $fwMedium;
 
+        font-weight: $fwMedium;
+        .check-result {
+          display: flex;
+          gap: 0.25rem;
+        }
         .check-calculation {
           color: $colorOutline;
         }
