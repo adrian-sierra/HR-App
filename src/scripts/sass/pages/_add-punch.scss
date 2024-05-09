@@ -30,20 +30,20 @@
       margin-top: 0.5rem;
       width: 250px;
     }
+    &__edit {
+      cursor: pointer;
+      display: grid;
+      align-self: center;
+      @include contentContainer();
+      border-radius: 100vw;
+      padding: 0.25rem 0.5rem;
+      color: $colorPrimaryContent;
+      &:hover {
+        opacity: 0.675;
+      }
+    }
   }
-}
-.entry__edit {
-  cursor: pointer;
-  display: grid;
-  align-self: center;
-  @include contentContainer();
-  border-radius: 100vw;
-  padding: 0.25rem 0.5rem;
-  color: $colorPrimaryContent;
-  &:hover {
-    opacity: 0.675;
-  }
-  .add__button {
+  &__button {
     margin: 0 auto;
     width: 250px;
   }

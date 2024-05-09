@@ -172,13 +172,13 @@
         margin-top: 1rem;
         width: 350px;
       }
+      &__edit {
+        width: 75px;
+      }
     }
-  }
-  .entry__edit {
-    width: 75px;
-  }
-  .add__button {
-    width: 350px;
+    &__button {
+      width: 350px;
+    }
   }
 }
 

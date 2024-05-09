@@ -507,8 +507,7 @@ body {
   margin-top: 0.5rem;
   width: 250px;
 }
-
-.entry__edit {
+.add .entry__edit {
   cursor: pointer;
   display: grid;
   align-self: center;
@@ -520,10 +519,10 @@ body {
   padding: 0.25rem 0.5rem;
   color: hsl(0, 100%, 100%);
 }
-.entry__edit:hover {
+.add .entry__edit:hover {
   opacity: 0.675;
 }
-.entry__edit .add__button {
+.add__button {
   margin: 0 auto;
   width: 250px;
 }
@@ -696,7 +695,7 @@ body {
     margin-top: 1rem;
     width: 350px;
   }
-  .entry__edit {
+  .add .entry__edit {
     width: 75px;
   }
   .add__button {
